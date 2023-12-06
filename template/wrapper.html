@@ -169,13 +169,13 @@
          </button>
          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
            <li>
-                 <a class="dropdown-item" href="/uz" type="button">Uzbek</a>
+                 <a class="dropdown-item" href="/uz/" type="button">Uzbek</a>
            </li>
            <li>
-                 <a class="dropdown-item" href="/en" type="button">English </a>
+                 <a class="dropdown-item" href="/en/" type="button">English </a>
            </li>
         <li>
-                 <a class="dropdown-item" href="/ru" type="button">Russian</a>
+                 <a class="dropdown-item" href="/ru/" type="button">Russian</a>
         </li>
 
 
@@ -199,7 +199,7 @@
          {% endif %}
          {% else %}
          <a style="margin-left: 22px;" href="/{{ request.LANGUAGE_CODE }}/accounts/login" class="btn bg-gradient-dark btn-sm   mb-0 me-2 mt-2 mt-md-0">{% trans 'Sign in' %}</a>
-         <a style="margin-left: 22px;" href="/{{ request.LANGUAGE_CODE }}/accounts/signup" class="btn bg-gradient-dark btn-sm   mb-0 me-2 mt-2 mt-md-0">{% trans 'Sign up' %}</a>
+         <a style="margin-left: 22px;" href="/{{ request.LANGUAGE_CODE }}/accounts/signup/" class="btn bg-gradient-dark btn-sm   mb-0 me-2 mt-2 mt-md-0">{% trans 'Sign up' %}</a>
          {% endif %}
 
 

@@ -13,7 +13,7 @@ DEBUG = False
 # DEBUG =  True
 
 
-ALLOWED_HOSTS = ['127.0.0.1','*']
+ALLOWED_HOSTS = ['www.my.activeresume.uz','my.activeresume.uz','127.0.0.1']
 
 
 SITE_ID = 1
@@ -70,9 +70,11 @@ TEMPLATES = [
         },
     },
 ]
+
 ALLOW_PARALLEL_RUNS = True
 SOCIALACCOUNT_LOGIN_ON_GET=True
-
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 
 
