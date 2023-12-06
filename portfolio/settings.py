@@ -1,7 +1,5 @@
-# '.suGtYK2)M?Qdm3'
+
 # digital VMjqg2&97YK9zXz
-# claoud  Ws@9#FDhij9$ayk
-# https://portal.aws.amazon.com/billing/signup#/identityverification
 
 import os
 from pathlib import Path
