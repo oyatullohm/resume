@@ -1,0 +1,131 @@
+{% extends 'wrapper.html' %}
+{% load i18n %}
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block content %}
+ <div style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');" loading="lazy">
+<section class="my-5 py-5">
+  <div class="container  " >
+    <div class="row">
+      {% for  m in master %}
+      <div  style="margin-top: 22px;" class="col-6 col-sm-3">
+        <div class="card ">
+          <span class="text-dark text-center">{{m.name}} </span>
+           <span class="badge badge-dot me-4">
+                           <img src="{{ m.img.url }}"  style="margin-left : 22px ;" class=" avatar avatar-sm rounded-circle me-2"> 
+             </span>
+
+              <span class="text-dark text-center">
+                <a href="{% url 'main:developers' m.id %}"> <button type="button"  class="  btn bg-gradient-dark btn-sm  btn-sm">{% trans 'Discover More' %}</button></a>
+            </span>
+        </div>
+      </div>
+      {% endfor %}
+
+      <div  style="margin-top: 22px;" class="col-6 col-sm-3">
+        <div class="card ">
+          <span class="text-dark text-center"> {% trans 'All' %}</span>
+           <span class="badge badge-dot me-4">
+                           <img src="/media/service_icon/icons8-card-exchange-64.png"  style="margin-left : 22px ;" class=" avatar avatar-sm rounded-circle me-2">
+             </span>
+
+              <span class="text-dark text-center">
+                <a href="{{ request.LANGUAGE_CODE}}/developers/0"> <button type="button"  class="  btn bg-gradient-dark btn-sm  btn-sm">{% trans 'Discover More' %}</button></a>
+            </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<p  id="services__"></p>
+<section  style="margin-top: 35px !important;"  >
+  <div class="container ">
+    <div class="row "><div class="col">
+      <div class="card" data-animation="true">
+
+        <div class="card-body text-center">
+
+          <h5 class="font-weight-normal mt-3">
+
+            <h3 class="text-center">{% trans 'Services' %}</h3>
+          </h5>
+          <p class="mb-0">
+            {% trans 'You can easily create a resume and portfolio on this page  You now have the opportunity to prepare a free resume and portfolio' %}
+          </p>
+
+        </div>
+        <hr class="dark horizontal my-0">
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact__" style=" margin-top: 35px !important; ">
+  <div class="container ">
+    <div class="row">
+      <div class="col-lg-7 mx-auto d-flex justify-content-center flex-column">
+        <div class="card">
+        <h3 class="text-center">{% trans 'Contact' %}</h3>
+        <p class="text-center"> {% trans 'For suggestions and complaints' %}</p>
+        <form aston="" role="form"  id="contact-form" method="post" autocomplete="off">
+          {% csrf_token %}
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+
+                <div class="input-group input-group-dynamic mb-4">
+                  <label class=""  >  {% if request.user.is_authenticated %}  {% else %} {% trans 'First Name ' %} {% endif %} </label>
+                  <input required class="form-control" value="{{request.user.first_name }}" aria-label="First Name..." type="text" name="first_name" >
+                </div>
+              </div>
+              <div class="col-md-6 ps-2">
+                <div class="input-group input-group-dynamic">
+                  <label class=""> {% if request.user.is_authenticated %} {% else %} {% trans 'Last Name ' %} {% endif %}</label>
+                  <input required type="text" value="{{request.user.last_name}}" class="form-control" placeholder="" aria-label="Last Name..." name="last_name" >
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic">
+                <label class=""> {% if request.user.is_authenticated %}  {% else %} Email Address {% endif %}</label>
+                <input required type="email"  value="{{request.user.email}}" class="form-control" name="email">
+              </div>
+            </div>
+            <div class="input-group mb-4 input-group-static">
+              <label>{% trans 'Your message' %}</label>
+              <textarea required  class="form-control" id="message" rows="4" name="message"></textarea>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <button type="submit" class="btn bg-gradient-dark w-100">{% trans 'Send Message' %}</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+</div>
+
+
+
+
+
+{% endblock content %}
+
+

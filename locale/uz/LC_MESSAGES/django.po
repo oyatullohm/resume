@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-02 15:55+0500\n"
+"PO-Revision-Date: 2023-12-02 16:14+0500\n"
+"Last-Translator: oyatillo karimberdiev <marziyahoni@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: portfolio/settings.py:144
+msgid "English"
+msgstr "English"
+
+#: portfolio/settings.py:145
+msgid "Uzbek"
+msgstr "Uzbek"
+
+#: portfolio/settings.py:146
+msgid "Russian"
+msgstr "Russian"
+
+#: template/account/login.html:16 template/account/sign-up.html:80
+#: template/wrapper.html:198
+msgid "Sign in"
+msgstr "tizimga kirish"
+
+#: template/account/login.html:24 template/account/sign-up.html:24
+msgid "Username"
+msgstr "Foydalanuvchi"
+
+#: template/account/login.html:28 template/account/sign-up.html:54
+msgid "Password"
+msgstr "Parol"
+
+#: template/account/login.html:32
+msgid "Remember"
+msgstr "Eslab qoling"
+
+#: template/account/login.html:37
+msgid "Sigh in"
+msgstr "Tizimga kirish"
+
+#: template/account/login.html:45
+msgid "Sigh up"
+msgstr ""
+"Ro'yxatdan o'tish\n"
+"​"
+
+#: template/account/login.html:49 template/account/login.html:71
+msgid "Password reset"
+msgstr "Parolni tiklash"
+
+#: template/account/login.html:54
+msgid "Sigh up with"
+msgstr "bilan ro'yxatdan o'ting"
+
+#: template/account/login.html:82
+msgid "Enter your email or login"
+msgstr "Elektron pochtangizni yoki loginingizni kiriting"
+
+#: template/account/login.html:91 template/edit_profil_user.html:45
+#: template/edit_profil_user.html:120 template/edit_profil_user.html:190
+#: template/edit_profil_user.html:242 template/edit_profil_user.html:320
+#: template/wrapper.html:119
+msgid "Close"
+msgstr "Yopish"
+
+#: template/account/login.html:97
+msgid "Ok"
+msgstr "Ok"
+
+#: template/account/sign-up.html:15 template/account/sign-up.html:76
+#: template/wrapper.html:199
+msgid "Sign up"
+msgstr "Ro'yxatdan o'tish"
+
+#: template/account/sign-up.html:30 template/edit_profil_user.html:368
+msgid "First name"
+msgstr "Ism"
+
+#: template/account/sign-up.html:36 template/edit_profil_user.html:374
+msgid "Last name"
+msgstr "Familiya"
+
+#: template/account/sign-up.html:48 template/archive_resume.html:37
+#: template/edit_profil_user.html:386 template/user.html:283
+#: template/wrapper.html:57
+msgid "Phone"
+msgstr "Telefon"
+
+#: template/account/sign-up.html:60 template/account/ver-code.html:49
+msgid "Password (repeat again)"
+msgstr "Parol (yana takrorlang)"
+
+#: template/account/sign-up.html:65
+msgid "Select your category"
+msgstr "Kategoriyangizni tanlang"
+
+#: template/account/sign-up.html:87
+#, fuzzy
+#| msgid "Sign up"
+msgid " Sign up with "
+msgstr "Ro'yxatdan o'tish"
+
+#: template/account/ver-code.html:17
+msgid "Verification Code "
+msgstr "Tasdiq kodi"
+
+#: template/account/ver-code.html:37 template/account/ver-code.html:43
+msgid "New Password "
+msgstr "Yangi parol"
+
+#: template/account/ver-code.html:59
+msgid "Edit Password"
+msgstr "Parolni tahrirlash"
+
+#: template/archive_resume.html:35 template/list_user.html:38
+#: template/wrapper.html:51
+msgid "Name"
+msgstr "Ism"
+
+#: template/archive_resume.html:38 template/archive_resume.html:69
+msgid "Downland"
+msgstr "yuklab olish"
+
+#: template/edit_profil_user.html:20
+msgid "Create technical skills"
+msgstr "Texnik ko'nikmalarni shakllantirish"
+
+#: template/edit_profil_user.html:34
+msgid "Technology-name"
+msgstr "Texnologiya nomi"
+
+#: template/edit_profil_user.html:39
+msgid "percentage max"
+msgstr "foiz maks"
+
+#: template/edit_profil_user.html:46 template/edit_profil_user.html:121
+#: template/edit_profil_user.html:195 template/wrapper.html:125
+msgid "Create"
+msgstr "Yaratmoq"
+
+#: template/edit_profil_user.html:65
+msgid "Create Service Info"
+msgstr "izmat ma'lumotlarini yaratish"
+
+#: template/edit_profil_user.html:79
+#, fuzzy
+#| msgid "Service"
+msgid "Service title "
+msgstr "Hizmat"
+
+#: template/edit_profil_user.html:115
+#, fuzzy
+#| msgid "Service"
+msgid "About service"
+msgstr "Hizmat"
+
+#: template/edit_profil_user.html:145
+msgid "Add Your Project"
+msgstr "Loyihangizni qo'shing"
+
+#: template/edit_profil_user.html:168
+msgid " Project title"
+msgstr "Loyiha nomi"
+
+#: template/edit_profil_user.html:178
+msgid "Project Github link"
+msgstr ""
+
+#: template/edit_profil_user.html:183
+msgid "Project Live Preview link"
+msgstr "Loyihani Live Preview havolasi"
+
+#: template/edit_profil_user.html:217
+msgid "Edit Delete"
+msgstr "Tahrirlash Oʻchirish"
+
+#: template/edit_profil_user.html:247 template/edit_profil_user.html:327
+msgid "Edit"
+msgstr "Tahrirlash "
+
+#: template/edit_profil_user.html:252
+msgid "delete"
+msgstr "Oʻchirish"
+
+#: template/edit_profil_user.html:274 template/wrapper.html:41
+msgid "Add Resume"
+msgstr "Rezyume qo'shing"
+
+#: template/edit_profil_user.html:283 template/user.html:332
+#: template/wrapper.html:82
+msgid "Education"
+msgstr "Ta'lim"
+
+#: template/edit_profil_user.html:289 template/user.html:339
+#: template/user.html:341 template/wrapper.html:88
+msgid "Skills"
+msgstr "Ko'nikmalar"
+
+#: template/edit_profil_user.html:296 template/user.html:346
+#: template/user.html:348 template/wrapper.html:95
+msgid "Experience"
+msgstr "Tajriba"
+
+#: template/edit_profil_user.html:303 template/user.html:192
+#: template/user.html:241 template/user.html:326 template/user.html:328
+#: template/wrapper.html:102
+msgid "About"
+msgstr "Haqida"
+
+#: template/edit_profil_user.html:310 template/user.html:354
+#: template/user.html:356 template/wrapper.html:109
+msgid "Hobbies"
+msgstr "sevimli mashg'ulotlari"
+
+#: template/edit_profil_user.html:396 template/user.html:265
+msgid "Master"
+msgstr ""
+
+#: template/edit_profil_user.html:416
+msgid "Photo"
+msgstr "Surat"
+
+#: template/edit_profil_user.html:426 template/user.html:279
+#: template/user.html:319 template/wrapper.html:76
+msgid "Birthday"
+msgstr "Tug'ilgan kun"
+
+#: template/edit_profil_user.html:479
+msgid "Profil active"
+msgstr "Profil faol"
+
+#: template/edit_profil_user.html:487
+msgid "Editing"
+msgstr "Tahrirlash"
+
+#: template/edit_profil_user.html:507
+msgid "Technical skills "
+msgstr "Texnik ko'nikmalar"
+
+#: template/edit_profil_user.html:549
+msgid "What I Do "
+msgstr "Nima qilaman"
+
+#: template/edit_profil_user.html:560
+#, fuzzy
+#| msgid "Service"
+msgid "Service name"
+msgstr "Hizmat"
+
+#: template/edit_profil_user.html:575
+msgid " Delete"
+msgstr "Oʻchirish"
+
+#: template/edit_profil_user.html:582 template/edit_profil_user.html:658
+msgid "Save"
+msgstr "Saqlash"
+
+#: template/edit_profil_user.html:608 template/user.html:202
+#: template/user.html:407
+msgid "Portfolio"
+msgstr "Portfel"
+
+#: template/edit_profil_user.html:652
+msgid "Delete"
+msgstr "Oʻchirish"
+
+#: template/edit_profil_user.html:682 template/user.html:195
+#, fuzzy
+#| msgid "Add Resume"
+msgid "Resume"
+msgstr "Rezyume qo'shing"
+
+#: template/index.html:21 template/index.html:34
+msgid "Discover More"
+msgstr "Ko'proq kashf qiling"
+
+#: template/index.html:28
+msgid "All"
+msgstr "Hammasi"
+
+#: template/index.html:54 template/user.html:199 template/user.html:385
+#, fuzzy
+#| msgid "Service"
+msgid "Services"
+msgstr "Hizmat"
+
+#: template/index.html:57
+msgid ""
+"You can easily create a resume and portfolio on this page  You now have the "
+"opportunity to prepare a free resume and portfolio"
+msgstr ""
+"Siz ushbu sahifada osongina rezyume va portfel yaratishingiz mumkin. Endi "
+"sizda bepul rezyume va portfel tayyorlash imkoniyati mavjud."
+
+#: template/index.html:74 template/user.html:205 template/user.html:438
+#: template/wrapper.html:160 template/wrapper.html:332
+msgid "Contact"
+msgstr "Aloqa"
+
+#: template/index.html:75
+msgid "For suggestions and complaints"
+msgstr ""
+"​\n"
+"30 / 5 000\n"
+"Результаты перевода\n"
+"Перевод\n"
+"Taklif va shikoyatlar uchun"
+
+#: template/index.html:83 template/user.html:271
+msgid "First Name "
+msgstr "Ism"
+
+#: template/index.html:89
+msgid "Last Name "
+msgstr "Familya"
+
+#: template/index.html:101
+msgid "Your message"
+msgstr "Xabaringiz"
+
+#: template/index.html:106
+msgid "Send Message"
+msgstr "Xabar yuborish"
+
+#: template/list_user.html:39
+msgid "Category"
+msgstr "Turkum"
+
+#: template/list_user.html:41
+msgid "Technical skills"
+msgstr "Texnik ko'nikmalar"
+
+#: template/list_user.html:42 template/user.html:268
+msgid "Level"
+msgstr "Daraja"
+
+#: template/list_user.html:92
+msgid "More info..."
+msgstr "Batafsil ma'lumot..."
+
+#: template/user.html:188
+#, fuzzy
+#| msgid "Home"
+msgid " Home"
+msgstr "Uy"
+
+#: template/user.html:211 template/user.html:214 template/wrapper.html:152
+msgid "Home"
+msgstr "Uy"
+
+#: template/user.html:215
+msgid "Employees"
+msgstr "Xodimlar"
+
+#: template/user.html:217
+#, fuzzy
+#| msgid "Edit profile "
+msgid "Edit profil "
+msgstr "Profilni tahrirlash"
+
+#: template/user.html:218
+#, fuzzy
+#| msgid "Log out"
+msgid "Log out "
+msgstr "Chiqish"
+
+#: template/user.html:220
+msgid "Login"
+msgstr "Tizimga kirish"
+
+#: template/user.html:221
+#, fuzzy
+#| msgid "Sign up"
+msgid "Sign up "
+msgstr "Ro'yxatdan o'tish"
+
+#: template/user.html:275
+#, fuzzy
+#| msgid "Name"
+msgid "Last Name"
+msgstr "Ism"
+
+#: template/user.html:320
+msgid "Cell"
+msgstr "Cell"
+
+#: template/user.html:334
+msgid "Universitet Kollej"
+msgstr "Universitet Kollej"
+
+#: template/user.html:373
+msgid "Download "
+msgstr "Yuklab olish"
+
+#: template/user.html:418
+msgid "live_link"
+msgstr "jonli havola"
+
+#: template/wrapper.html:64
+msgid "Email"
+msgstr "Elektron pochta"
+
+#: template/wrapper.html:70
+msgid "Address"
+msgstr "Manzil"
+
+#: template/wrapper.html:156
+msgid "Service"
+msgstr "Hizmat"
+
+#: template/wrapper.html:182
+msgid "Sped resume pdf "
+msgstr "Tez rezyume pdf"
+
+#: template/wrapper.html:183
+msgid "archive resume pdf"
+msgstr "Arxiv rezyume pdf"
+
+#: template/wrapper.html:187
+msgid "Log out"
+msgstr "Chiqish"
+
+#: template/wrapper.html:189 template/wrapper.html:193
+msgid "Edit profile "
+msgstr "Profilni tahrirlash"
+
+#: template/wrapper.html:276
+msgid " Company"
+msgstr "Kompaniya"
+
+#: template/wrapper.html:279
+msgid ""
+"We have created this page for the convenience of professionals. You will not"
+" waste time creating a resume"
+msgstr ""
+"Biz ushbu sahifani foydalanuvchilarga qulaylik \n"
+" uchun yaratdik. Rezyume uchun vaqtni behuda sarflamaysiz"
+
+#: template/wrapper.html:288
+msgid "Products Front-end"
+msgstr "Mahsulotlar Front-end"
+
+#: template/wrapper.html:312
+msgid "Products Back-end"
+msgstr "Mahsulotlar Back-end"
+
+#: template/wrapper.html:351
+msgid "Copyright"
+msgstr "Mualliflik huquqi"
+
+#, fuzzy
+#~ msgid "Download"
+#~ msgstr "Yuklab olish"
+
+#~ msgid "Developers "
+#~ msgstr "Dasturchilar"
+
+#~ msgid "hello"
+#~ msgstr "salom"

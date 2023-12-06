@@ -1,0 +1,120 @@
+{% extends 'wrapper.html' %}
+{% block title %}
+<title>Developers </title>
+{% endblock %}
+{% block content %}
+{% load i18n %}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<style>
+  .dataTables_length {
+    display:  none !important;
+  }
+  #myTable_filter input{
+    margin-top: 5px !important;
+    margin-right: 50px;
+    border-radius: 25px !important;
+    background-color: rgb(255, 255, 255);
+  }
+  .dataTables_info{
+    display: none !important;
+  }
+
+</style>
+<header >
+  <div class="page-header min-vh-100" style="background-image: url(&#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&#39;);" loading="lazy">
+    <span class="mask bg-gradient-dark opacity-5"></span>
+    <div class="container" style="margin-top: 150px;">
+      <div class="row">
+        <div class="col ">
+
+          <div  style="margin-top: 10px;" class="card">
+            <div class="table-responsive" style="max-height:200vh; overflow-y:scroll;">
+
+
+              <table id="myTable" class="table align-items-center mb-0" >
+                <thead class="position-sticky z-index-sticky top-0">
+                  <tr >
+                    <th class="text-uppercase  text-xxs font-weight-bolder opacity-7">{% trans 'Name' %}</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> {% trans 'Category' %}</th>
+
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> {% trans 'Technical skills' %}</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> {% trans 'Level' %}</th>
+                    <th class="text-secondary opacity-7"></th>
+                  </tr>
+                </thead>
+
+                <tbody  id="header">
+                  {% for d in developers %}
+
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2 py-1">
+                        <div>
+                          {% if d.img %}
+                          <a href="javascript:;" class="avatar avatar-lg rounded-circle">
+                            <img  style="height: 45px; width: 45px;" alt="Image placeholder" src="{{ d.img.url }}">
+                          </a>
+                          {% else %}
+                          <a href="javascript:;" class="avatar avatar-lg rounded-circle">
+                            <img style="height: 45px; width: 45px;" alt="Image placeholder" src="/media/user_images/profil.png">
+                          </a>
+                          {% endif %}
+                        </div>
+                        <div class="d-flex flex-column justify-content-center m-2">
+                          <h6 class="mb-0 text-xs">{{ d.first_name }}</h6>
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0  text-dark">{{d.master}}</p>
+
+                    </td>
+
+                    <td class="align-middle text-center text-sm">
+                      <p class="text-xs font-weight-bold mb-0 text-dark"> {% for i in d.users.all %}
+                        {% if forloop.counter < 6 %}
+                            {{ i | upper }} :
+                        {% else %}
+                        {% endif %}
+                  {% endfor %}
+                      </p>
+
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="badge bg-dark">{{ d.masterlevel }}</span>
+
+                    </td>
+                    <td class="align-middle">
+                      <span class="badge bg-gradient-info">
+                        <a href="{{request.LANGUAGE_CODE}}/user/{{d.username}}" class="text-white font-weight-normal " data-original-title="Edit user">
+                        {% trans 'More info...' %}
+                      </a>
+                      </span>
+                    </td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- <script src="/static/jquery-3.6.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+    $('#myTable').DataTable();
+
+
+</script>
+
+{% endblock content %}

@@ -1,0 +1,453 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-02 15:55+0500\n"
+"PO-Revision-Date: 2023-11-22 16:59+0500\n"
+"Last-Translator: Marziyahon Ibrohimjonova <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: portfolio/settings.py:144
+msgid "English"
+msgstr "English"
+
+#: portfolio/settings.py:145
+msgid "Uzbek"
+msgstr "Uzbek"
+
+#: portfolio/settings.py:146
+msgid "Russian"
+msgstr "Russian"
+
+#: template/account/login.html:16 template/account/sign-up.html:80
+#: template/wrapper.html:198
+msgid "Sign in"
+msgstr "Sign in"
+
+#: template/account/login.html:24 template/account/sign-up.html:24
+msgid "Username"
+msgstr ""
+
+#: template/account/login.html:28 template/account/sign-up.html:54
+msgid "Password"
+msgstr ""
+
+#: template/account/login.html:32
+msgid "Remember"
+msgstr ""
+
+#: template/account/login.html:37
+msgid "Sigh in"
+msgstr ""
+
+#: template/account/login.html:45
+msgid "Sigh up"
+msgstr ""
+
+#: template/account/login.html:49 template/account/login.html:71
+msgid "Password reset"
+msgstr ""
+
+#: template/account/login.html:54
+msgid "Sigh up with"
+msgstr ""
+
+#: template/account/login.html:82
+msgid "Enter your email or login"
+msgstr ""
+
+#: template/account/login.html:91 template/edit_profil_user.html:45
+#: template/edit_profil_user.html:120 template/edit_profil_user.html:190
+#: template/edit_profil_user.html:242 template/edit_profil_user.html:320
+#: template/wrapper.html:119
+msgid "Close"
+msgstr ""
+
+#: template/account/login.html:97
+msgid "Ok"
+msgstr ""
+
+#: template/account/sign-up.html:15 template/account/sign-up.html:76
+#: template/wrapper.html:199
+msgid "Sign up"
+msgstr "Sign up"
+
+#: template/account/sign-up.html:30 template/edit_profil_user.html:368
+msgid "First name"
+msgstr ""
+
+#: template/account/sign-up.html:36 template/edit_profil_user.html:374
+msgid "Last name"
+msgstr ""
+
+#: template/account/sign-up.html:48 template/archive_resume.html:37
+#: template/edit_profil_user.html:386 template/user.html:283
+#: template/wrapper.html:57
+msgid "Phone"
+msgstr ""
+
+#: template/account/sign-up.html:60 template/account/ver-code.html:49
+msgid "Password (repeat again)"
+msgstr ""
+
+#: template/account/sign-up.html:65
+msgid "Select your category"
+msgstr ""
+
+#: template/account/sign-up.html:87
+#, fuzzy
+#| msgid "Sign up"
+msgid " Sign up with "
+msgstr "Sign up"
+
+#: template/account/ver-code.html:17
+msgid "Verification Code "
+msgstr ""
+
+#: template/account/ver-code.html:37 template/account/ver-code.html:43
+msgid "New Password "
+msgstr ""
+
+#: template/account/ver-code.html:59
+msgid "Edit Password"
+msgstr ""
+
+#: template/archive_resume.html:35 template/list_user.html:38
+#: template/wrapper.html:51
+msgid "Name"
+msgstr ""
+
+#: template/archive_resume.html:38 template/archive_resume.html:69
+msgid "Downland"
+msgstr ""
+
+#: template/edit_profil_user.html:20
+msgid "Create technical skills"
+msgstr ""
+
+#: template/edit_profil_user.html:34
+msgid "Technology-name"
+msgstr ""
+
+#: template/edit_profil_user.html:39
+msgid "percentage max"
+msgstr ""
+
+#: template/edit_profil_user.html:46 template/edit_profil_user.html:121
+#: template/edit_profil_user.html:195 template/wrapper.html:125
+msgid "Create"
+msgstr ""
+
+#: template/edit_profil_user.html:65
+msgid "Create Service Info"
+msgstr ""
+
+#: template/edit_profil_user.html:79
+#, fuzzy
+#| msgid "Service"
+msgid "Service title "
+msgstr "Service"
+
+#: template/edit_profil_user.html:115
+#, fuzzy
+#| msgid "Service"
+msgid "About service"
+msgstr "Service"
+
+#: template/edit_profil_user.html:145
+msgid "Add Your Project"
+msgstr ""
+
+#: template/edit_profil_user.html:168
+msgid " Project title"
+msgstr ""
+
+#: template/edit_profil_user.html:178
+msgid "Project Github link"
+msgstr ""
+
+#: template/edit_profil_user.html:183
+msgid "Project Live Preview link"
+msgstr ""
+
+#: template/edit_profil_user.html:217
+msgid "Edit Delete"
+msgstr ""
+
+#: template/edit_profil_user.html:247 template/edit_profil_user.html:327
+msgid "Edit"
+msgstr ""
+
+#: template/edit_profil_user.html:252
+msgid "delete"
+msgstr ""
+
+#: template/edit_profil_user.html:274 template/wrapper.html:41
+msgid "Add Resume"
+msgstr ""
+
+#: template/edit_profil_user.html:283 template/user.html:332
+#: template/wrapper.html:82
+msgid "Education"
+msgstr ""
+
+#: template/edit_profil_user.html:289 template/user.html:339
+#: template/user.html:341 template/wrapper.html:88
+msgid "Skills"
+msgstr ""
+
+#: template/edit_profil_user.html:296 template/user.html:346
+#: template/user.html:348 template/wrapper.html:95
+msgid "Experience"
+msgstr ""
+
+#: template/edit_profil_user.html:303 template/user.html:192
+#: template/user.html:241 template/user.html:326 template/user.html:328
+#: template/wrapper.html:102
+msgid "About"
+msgstr ""
+
+#: template/edit_profil_user.html:310 template/user.html:354
+#: template/user.html:356 template/wrapper.html:109
+msgid "Hobbies"
+msgstr ""
+
+#: template/edit_profil_user.html:396 template/user.html:265
+msgid "Master"
+msgstr ""
+
+#: template/edit_profil_user.html:416
+msgid "Photo"
+msgstr ""
+
+#: template/edit_profil_user.html:426 template/user.html:279
+#: template/user.html:319 template/wrapper.html:76
+msgid "Birthday"
+msgstr ""
+
+#: template/edit_profil_user.html:479
+msgid "Profil active"
+msgstr ""
+
+#: template/edit_profil_user.html:487
+msgid "Editing"
+msgstr ""
+
+#: template/edit_profil_user.html:507
+msgid "Technical skills "
+msgstr ""
+
+#: template/edit_profil_user.html:549
+msgid "What I Do "
+msgstr ""
+
+#: template/edit_profil_user.html:560
+#, fuzzy
+#| msgid "Service"
+msgid "Service name"
+msgstr "Service"
+
+#: template/edit_profil_user.html:575
+msgid " Delete"
+msgstr ""
+
+#: template/edit_profil_user.html:582 template/edit_profil_user.html:658
+msgid "Save"
+msgstr ""
+
+#: template/edit_profil_user.html:608 template/user.html:202
+#: template/user.html:407
+msgid "Portfolio"
+msgstr ""
+
+#: template/edit_profil_user.html:652
+msgid "Delete"
+msgstr ""
+
+#: template/edit_profil_user.html:682 template/user.html:195
+msgid "Resume"
+msgstr ""
+
+#: template/index.html:21 template/index.html:34
+msgid "Discover More"
+msgstr ""
+
+#: template/index.html:28
+msgid "All"
+msgstr ""
+
+#: template/index.html:54 template/user.html:199 template/user.html:385
+#, fuzzy
+#| msgid "Service"
+msgid "Services"
+msgstr "Service"
+
+#: template/index.html:57
+msgid ""
+"You can easily create a resume and portfolio on this page  You now have the "
+"opportunity to prepare a free resume and portfolio"
+msgstr ""
+
+#: template/index.html:74 template/user.html:205 template/user.html:438
+#: template/wrapper.html:160 template/wrapper.html:332
+msgid "Contact"
+msgstr "Contact"
+
+#: template/index.html:75
+msgid "For suggestions and complaints"
+msgstr ""
+
+#: template/index.html:83 template/user.html:271
+msgid "First Name "
+msgstr ""
+
+#: template/index.html:89
+msgid "Last Name "
+msgstr ""
+
+#: template/index.html:101
+msgid "Your message"
+msgstr ""
+
+#: template/index.html:106
+msgid "Send Message"
+msgstr ""
+
+#: template/list_user.html:39
+msgid "Category"
+msgstr ""
+
+#: template/list_user.html:41
+msgid "Technical skills"
+msgstr ""
+
+#: template/list_user.html:42 template/user.html:268
+msgid "Level"
+msgstr ""
+
+#: template/list_user.html:92
+msgid "More info..."
+msgstr ""
+
+#: template/user.html:188
+#, fuzzy
+#| msgid "Home"
+msgid " Home"
+msgstr "Home"
+
+#: template/user.html:211 template/user.html:214 template/wrapper.html:152
+msgid "Home"
+msgstr "Home"
+
+#: template/user.html:215
+msgid "Employees"
+msgstr ""
+
+#: template/user.html:217
+#, fuzzy
+#| msgid "Edit profile "
+msgid "Edit profil "
+msgstr "Edit profile"
+
+#: template/user.html:218
+#, fuzzy
+#| msgid "Log out"
+msgid "Log out "
+msgstr "Log out"
+
+#: template/user.html:220
+msgid "Login"
+msgstr ""
+
+#: template/user.html:221
+#, fuzzy
+#| msgid "Sign up"
+msgid "Sign up "
+msgstr "Sign up"
+
+#: template/user.html:275
+msgid "Last Name"
+msgstr ""
+
+#: template/user.html:320
+msgid "Cell"
+msgstr ""
+
+#: template/user.html:334
+msgid "Universitet Kollej"
+msgstr ""
+
+#: template/user.html:373
+msgid "Download "
+msgstr ""
+
+#: template/user.html:418
+msgid "live_link"
+msgstr "live link"
+
+#: template/wrapper.html:64
+msgid "Email"
+msgstr ""
+
+#: template/wrapper.html:70
+msgid "Address"
+msgstr ""
+
+#: template/wrapper.html:156
+msgid "Service"
+msgstr "Service"
+
+#: template/wrapper.html:182
+msgid "Sped resume pdf "
+msgstr "Sped resume pdf"
+
+#: template/wrapper.html:183
+msgid "archive resume pdf"
+msgstr "archive resume pdf"
+
+#: template/wrapper.html:187
+msgid "Log out"
+msgstr "Log out"
+
+#: template/wrapper.html:189 template/wrapper.html:193
+msgid "Edit profile "
+msgstr "Edit profile"
+
+#: template/wrapper.html:276
+msgid " Company"
+msgstr ""
+
+#: template/wrapper.html:279
+msgid ""
+"We have created this page for the convenience of professionals. You will not "
+"waste time creating a resume"
+msgstr ""
+"We made this page user friendly\n"
+"  created for You don't waste time on your resume"
+
+#: template/wrapper.html:288
+msgid "Products Front-end"
+msgstr ""
+
+#: template/wrapper.html:312
+msgid "Products Back-end"
+msgstr ""
+
+#: template/wrapper.html:351
+msgid "Copyright"
+msgstr ""
+
+#~ msgid "hello"
+#~ msgstr "hello"

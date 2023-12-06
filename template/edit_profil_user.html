@@ -1,0 +1,781 @@
+{% extends 'wrapper.html' %}
+{% block title %}
+<title>Edit </title>
+{% endblock %}
+{% block content %}
+{% load i18n %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<!-- modal 3-->
+
+    <div class="col-sm-3 col-6 mx-auto">
+
+      <!-- Modal 3-->
+      <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{% trans 'Create technical skills' %}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                  <div class="row">
+                    <div class="col-lg-12 mx-auto d-flex justify-content-center flex-column ">
+
+                      <form action="{{request.LANGUAGE_CODE}}/technology" role="form" id="contact-form" method="get" autocomplete="off">
+                        <!-- {% csrf_token %} -->
+                        <div class="card-body">
+                          <div class="row">
+ 
+                            <div class="col-md-12">
+                              <div class="input-group input-group-dynamic mb-4">
+                                <input class="form-control p-2" aria-label="technology" type="text" placeholder="{% trans 'Technology-name' %}" name="technology" required>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="input-group input-group-dynamic mb-4">
+                                <input class="form-control p-2" aria-label="percentage" type="number" placeholder="percentage max {% trans 'percentage max' %} 100 % " name="percentage" required>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="buttons">
+                          <button type="button" class="btn bg-gradient-info mb-0 float-lg-start" data-bs-dismiss="modal"> {% trans 'Close' %}</button>
+                          <button type="submit" class="btn bg-gradient-success mb-0 float-end">{% trans 'Create' %}</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 col-6 mx-auto">
+
+      <!-- Modal 1 -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"> {% trans 'Create Service Info' %}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                  <div class="row">
+                    <div class="col-lg-12 mx-auto d-flex justify-content-center flex-column ">
+
+                      <form action="{% url 'main:service' %}" role="form" id="contact-form" method="post" autocomplete="off">
+                        {% csrf_token %}
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="input-group input-group-dynamic mb-4">
+                                <input class="form-control p-2" aria-label="First Name..." type="text" placeholder="{% trans 'Service title ' %}" name="service_name" required>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="input-group input-group-dynamic mb-4">
+                                <select class="form-control" id="exampleFormControlSelect1" name="icon">
+                                  <option value="/media/service_icon/icons8-server-64.png" selected>Server</option>
+                                  <option value="/media/service_icon/icons8-designthinking-64.png" selected>Dizayner</option>
+                                  <option value="/media/service_icon/icons8-database-64.png" selected>Database</option>
+                                  <option value="/media/service_icon/icons8-figma-64.png" selected>Figma</option>
+                                  <option value="/media/service_icon/icons8-mentor-64.png" selected>Mentor</option>
+                                  <option value="/media/service_icon/icons8-bots-64.png" selected>Bots</option>
+                                  <option value="/media/service_icon/icons8-settings.gif" selected>Back-end</option>
+                                  <option value="/media/service_icon/icons8-telegram-app-64.png" selected>Mobil app</option>
+                                  <option value="/media/service_icon/icons8-front-end-64.png" selected>Front-end</option>
+                                  <option value="/media/service_icon/icons8-web-app-64.png" selected>Web app</option>
+                                  <option value="/media/service_icon/icons8-developer-64.png" selected>Devoloper</option>
+                                  <option value="/media/service_icon/icons8-function-64.png" selected>Function</option>
+                                  <option value="/media/service_icon/icons8-object-oriented-programming-64.png" selected>Class</option>
+                                  <option value="/media/service_icon/icons8-ai-64.png" selected>ai</option>
+                                  <option value="/media/service_icon/icons8-desktop-64.png" selected>Desctop</option>
+                                  <option value="/media/service_icon/icons8-robotic-arm-64.png" selected>  Machine  </option>
+                                  <option value="/media/service_icon/icons8-book-64.png" selected>  Book  </option>
+                                  <option value="/media/service_icon/icons8-devops-64.png" selected> Devops   </option>
+                                  <option value="/media/service_icon/icons8-webpage-protection-64.png" selected> Webpage Protection </option>
+                                  <option value="/media/service_icon/icons8-bank-64.png" selected> Bank Service </option>
+                                  <option value="/media/service_icon/icons8-credit-card-transfer-64.png" selected>Money transfer  </option>
+                                  <option value="/media/service_icon/icons8-card-exchange-64.png" selected> Another </option>
+                                  <!-- <img src="" alt=""> -->
+                                </select>
+                              </div>
+                            </div>
+
+                          </div>
+
+                          <div class="input-group mb-4 input-group-static">
+                            <label>{% trans 'About service' %}</label>
+                            <textarea name="service_text" class="form-control p-2"  rows="4" name="service_text" style="background:rgb(243, 241, 241);" required></textarea>
+                          </div>
+                        </div>
+                        <div class="buttons">
+                          <button type="button" class="btn bg-gradient-info mb-0 float-lg-start" data-bs-dismiss="modal">{% trans 'Close' %}</button>
+                          <button type="submit" class="btn bg-gradient-success mb-0 float-end"> {% trans 'Create' %}</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- modal 1-->
+
+
+<!-- modal 2-->
+
+    <div class="col-sm-3 col-6 mx-auto">
+
+
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{% trans 'Add Your Project' %}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                  <div class="row">
+                    <div class="col-lg-12 mx-auto d-flex justify-content-center flex-column ">
+
+                      <form action="{% url 'main:project_create' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                            <div class="input-group input-group-outline mx-auto mt-3 d-none" style="width: 80%;">
+                              <input class="form-control" type="text" placeholder="" value="{{ user.id }}" name="user_id" >
+                            </div>
+
+                            <div class="input-group input-group-outline mx-auto mt-3"style="width: 80%;">
+                              <input type="file" name="img" class="form-control" required>
+                            </div>
+
+                            <div class="input-group input-group-outline mx-auto mt-3" style="width: 80%;">
+                              <input class="form-control" type="text" placeholder="Project name" value="" name="project_name" required>
+                            </div>
+                            <div class="input-group input-group-outline mx-auto mt-3" style="width: 80%;">
+                              <label for="">{% trans ' Project title' %} </label>
+
+                            </div>
+                            <div class="input-group input-group-outline mx-auto mt-3" style="width: 80%;">
+
+                              <textarea class="form-control" id="message" rows="4"  name="title" required> </textarea>
+                            </div>
+
+                            <div class="input-group input-group-outline mx-auto mt-3" style="width: 80%;">
+                              <span class="fab fa-github fa-2x me-2 mt-1"></span>
+                              <input class="form-control" type="text" placeholder="{% trans 'Project Github link' %}" name="github">
+                            </div>
+
+                            <div class="input-group input-group-outline mx-auto mt-3" style="width: 80%;">
+                              <span class="text-danger fa fa-eye fa-2x mt-1 me-1"></span>
+                              <input class="form-control" type="text" placeholder="{% trans 'Project Live Preview link' %}" name="live_link">
+                            </div>
+
+                            <div class="row m-4">
+                                <div class="col-md-6">
+                                  <!-- <button type="button" class="btn bg-gradient-info mb-0 float-lg-start" data-bs-dismiss="modal">Close</button> -->
+                                  <a href="" class="btn btn-icon bg-gradient-info d-lg-block mt-3 mb-0" data-bs-dismiss="modal">
+                                    {% trans 'Close' %}
+                                  </a>
+                                </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-icon bg-gradient-success d-lg-block mt-3 mb-0 w-100" >
+                                  {% trans 'Create' %}
+                                </button>
+                            </div>
+                            </div>
+
+                          </form>
+                    </div>
+                  </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- modal 2-->
+<!-- modal 4-->
+    <div class="col-sm-3 col-6 mx-auto">
+      <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{% trans 'Edit Delete' %} </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                  <div class="row">
+                    <div class="col-lg-12 mx-auto d-flex justify-content-center flex-column ">
+                      <div class="col-md-12">
+                        <label class="form-label" id="technology"  ></label>
+
+                        <div class="input-group input-group-outline ">
+                            <input type="text" class="form-control" id="technology_"   >
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <label class="form-label" id="percentage" > %</label>
+                          <div class="input-group input-group-outline">
+
+                            <input  type="number" class="form-control"  id="percentage_" >
+
+                          </div>
+                        </div>
+                        <div class="row m-4">
+                          <div class="col-md-6">
+                            <a href="" class="btn btn-icon bg-gradient-info d-lg-block mt-3 mb-0 w-100" data-bs-dismiss="modal">
+                              {% trans 'Close' %}
+                            </a>
+                          </div>
+                      <div class="col-md-6">
+                          <button  type="submit" id="edit_teh" class="btn btn-icon bg-gradient-success d-lg-block mt-3 mb-0 w-100" >
+                             {% trans 'Edit' %}
+                            </button>
+                      </div>
+                      <div class="col-md-12">
+                          <a href="/profil/{{user.id}}/{{user.username}}"   class="btn btn-icon bg-gradient-danger d-lg-block mt-3 mb-0 w-100" id="delete_teh" >
+                            {% trans 'delete' %}
+                          </a>
+                      </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- modal 4-->
+<!-- modal 5-->
+    <div class="col-sm-3 col-12 mx-auto">
+      <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{% trans 'Add Resume' %}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                  <div class="row">
+                    <div class="col-lg-12 mx-auto d-flex justify-content-center flex-column ">
+
+                      <div class="col-md-12">
+                        <label style="color: #0f0f0f;" class="form-label" id="education_" >{% trans 'Education' %}</label>
+                        <div class="input-group input-group-outline ">
+                            <input type="text" class="form-control education"   id="education"   name="education" >
+                        </div>
+                        </div>
+                        <div class="col-md-12">
+                          <label   style="color: #0f0f0f;" for="floatingTextarea" id="skills_">{% trans 'Skills' %}</label>
+
+                          <div class="form-floating">
+                            <textarea class="form-control border"  placeholder="Leave a comment here" id="skills" name="skills"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <label   style="color: #0f0f0f;" for="floatingTextarea" id="experience_">{% trans 'Experience' %}</label>
+
+                          <div class="form-floating">
+                            <textarea class="form-control border" placeholder="Leave a comment here" id="experience" name="experience"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <label   style="color: #0f0f0f;" for="floatingTextarea" id="about_">{% trans 'About' %}</label>
+
+                          <div class="form-floating">
+                            <textarea class="form-control border" value="" placeholder="Leave a comment here" id="about" name="about"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <label  style="color: #0f0f0f;" class="form-label" id="hobbies_"  >{% trans 'Hobbies' %}</label>
+
+                          <div  class="input-group input-group-outline ">
+                              <input type="text" class="form-control" id="hobbies" name="hobbies"  >
+                            </div>
+                          </div>
+                        <div class="row m-4">
+                          <div class="col-md-6">
+
+                            <a href="" class="btn btn-icon bg-gradient-info d-lg-block mt-3 mb-0 w-100" data-bs-dismiss="modal">
+                              {% trans 'Close' %}
+                            </a>
+                          </div>
+                      <div class="col-md-6">
+                        <form action="{{request.LANGUAGE_CODE}}/profil/{{user.id}}/{{user.username}}">
+
+                          <button  type="submit" id="edit_resume" class="btn btn-icon bg-gradient-success d-lg-block mt-3 mb-0 w-100" >
+                            {% trans 'Edit' %}
+                          </button>
+                        </form>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- modal 5-->
+
+<body class="blog-author bg-gray-200"  >
+  <div  class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4" style="margin-top: 300px !important; background-color:rgb(255, 255, 255) !important;">
+    <section class="py-sm-7 py-5 position-relative" id="about_id" >
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mx-auto">
+            <div class="mt-n8 mt-md-n12 text-center">
+              {% if user.img %}
+              <a class="avatar avatar-xl rounded-circle">
+                <img alt="Image placeholder" src="{{ user.img.url }}" style="width: 250px!important; height: 250px !important;">
+              </a>
+
+              {% else %}
+              <img class="img-fluid" src="/media/user_images/profil.png" alt="bruce" loading="lazy" style="width: 250px; border-radius:50%;">
+              {% endif %}
+            </div>
+            <div class="row py-5" >
+              <form action="{% url 'main:editprofil' user.id %}" method="post" enctype='multipart/form-data'  >
+                {% csrf_token %}
+
+
+              <div class="col-lg-7 z-index-2 position-relative px-md-2 px-sm-5 mx-auto">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                 <div class="row m-auto" >
+                  <div class="col-md-6">
+                    <label class="form-label">{% trans 'First name' %}</label>
+                    <div class="input-group input-group-outline ">
+                      <input type="text" class="form-control" value="{{ user.first_name }}" name="first_name">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">{% trans 'Last name' %}</label>
+                    <div class="input-group input-group-outline">
+                      <input type="text" class="form-control" value="{{ user.last_name }}" name="last_name">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <div class="input-group input-group-outline">
+                      <input type="email" class="form-control" value="{{ user.email }}" name="email">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label"> {% trans 'Phone' %} </label>
+                    <div class="input-group input-group-outline">
+                      <input type="tel" class="form-control" value="{{ user.phone }}" name="phone"   placeholder="+123456789012" id="phone"  pattern="[+]{1}[0-9]{12}" required >
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6  mt-4">
+                    <div class="input-group input-group-static mb-4">
+                      <select class="form-control" id="exampleFormControlSelect1" name="master">
+                        <option value="{{user.master.id}}" selected> {% trans 'Master' %} {{user.master}} </option>
+                        {% for m in master %}
+
+                        <option value="{{ m.id }}">{{ m }}</option>
+
+                        {% endfor %}
+                      </select>
+                     </div>
+                  </div>
+                  <div class="col-md-6 mt-4">
+                    <div class="input-group input-group-static mb-4">
+                      <select class="form-control" id="exampleFormControlSelect1" name="masterlevel">
+                        <option   class=" bg-dark"  value="{{user.masterlevel.id}}"> {{user.masterlevel.level }} </option>
+                        {% for m in masterlevel %}
+                        <option  class=" bg-dark"  value="{{ m.id }}"> {{ m.level }} </option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  </div>
+                    <div class="col-md-6">
+                      <label class="form-label">  {% trans 'Photo' %}  </label>
+                      <div class="input-group input-group-outline">
+                        {% if user.img %}
+                        <input type="file" class="form-control" value="{{user.img.url}}" name="img">
+                        {% else %}
+                        <input type="file" class="form-control" value="" name="img">
+                        {% endif %}
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">{% trans 'Birthday' %} </label>
+                      <div class="input-group input-group-outline">
+                        <input type="date" class="form-control" value="{{user.birthday}}" name="birthday">
+                      </div>
+                    </div>
+
+                 </div>
+
+                </div>
+
+                <div class="link-social mt-5 text-center">
+                  <div class="row">
+
+                    <div class="col-md-6 mx-auto">
+                      <div class="input-group input-group-outline mb-4">
+                        <a href="{{ user.telegram }}" target="_blank" class="text-dark me-2 mt-1 opacity-5 ">
+                          <i class="fa-brands fa-telegram fa-beat fa-2xl" style="color: #1dcbd7;"></i>
+                        </a>
+                        <label class="form-label"></label>
+                        <input class="form-control" type="text" placeholder="Your telegram link" value="{{ user.telegram }}" name="telegram">
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mx-auto">
+                      <div class="input-group input-group-outline mb-4">
+                        <a href="javascript:;" class="text-dark me-2 mt-1 opacity-5">
+                          <i class="fa-brands fa-linkedin fa-beat fa-2xl" style="color: #0f1bbd;"></i>
+                      </a>
+                        <label class="form-label"></label>
+                        <input class="form-control" type="text" placeholder="Your linkedin link" value="{{user.linkedin}}" name="linkedin" >
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mx-auto">
+                      <div class="input-group input-group-outline mb-4">
+                        <a href="javascript:;" class="text-dark me-2 mt-1 opacity-5">
+
+                          <i class="fa-brands fa-instagram fa-beat fa-2xl" style="color: #ee2f2f;"></i>
+                      </a>
+                        <label class="form-label"></label>
+                        <input class="form-control" type="text" placeholder="Your instagram link" value="{{user.instagram}}" name="instagram" >
+                      </div>
+                    </div>
+                    <div class="col-md-6 mx-auto">
+                      <div class="input-group input-group-outline mb-4">
+                        <a href="javascript:;" class="text-dark me-2 mt-1 opacity-5">
+                          <i class="fa-brands fa-github fa-beat fa-2xl" style="color: #0f0f0f;"></i>
+                      </a>
+                        <label class="form-label"></label>
+                        <input class="form-control" type="text" placeholder="Your git hub link" value="{{ user.github }}" name="github">
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">{% trans 'Profil active' %} </label>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" {% if user.ok == True %} checked="{{True}}" {% endif %}  name="ok" type="checkbox" id="flexSwitchCheckDefault">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 text-center mt-5">
+                    <button type="submit" class="btn bg-gradient-warning w-50 ">{% trans 'Editing' %}</button>
+                  </div>
+              </div>
+            </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4  mb-4 " style="background-color: rgb(255, 255, 255) !important;" >
+
+  <section class="py-6 mt-4">
+    <div class="container">
+
+      <div class="card bg-success p-2 w-60 " style="margin:0 auto; float:none;">
+        <h3   class="text-center text-white font-weight-bold">{% trans 'Technical skills ' %} <button class="bg-success" style="border: none;"  data-bs-toggle="modal" data-bs-target="#exampleModal3" > <i class="fa-solid fa-plus fa-beat-fade fa-2xs" style="color: #f3f3f3; margin-left: 15px; "></i></button> </h3>
+
+      </div>
+
+      <div class="row justify-space-between py-2 mt-5">
+        {% load my_tag %}
+        {% for c in category %}
+        <div class="col-lg-4 mx-auto">
+
+
+          <h5 class="text-center"  ></h5>
+
+      <div class="progress-wrapper mt-3">
+        <div class="progress-info">
+          <div class="progress-percentage">
+
+            <a href="#exampleModal4"  data-bs-toggle="modal" >
+              <span data-id="{{c.id}}"   class="text-sm font-weight-bold dd " >{{ c.technology  }} | {{ c.percentage }} % </span>
+            </a>
+          </div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar " role="progressbar" aria-valuenow="{{ c.pencentage }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ c.percentage }}%;  {%  bg_color forloop.counter %} ">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    {%  endfor %}
+
+      </div>
+      </div>
+    </section>
+  </div>
+
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4  mb-4 " style="background-color:#ffffff !important;">
+    <section class="py-6 mt-4">
+      <div class="container">
+
+        <div class="card bg-success p-2 w-60 " style="margin:0 auto; float:none;">
+          <h3 class="text-center text-white font-weight-bold">{% trans 'What I Do ' %} <button class="bg-success" style="border: none;"  data-bs-toggle="modal" data-bs-target="#exampleModal" > <i class="fa-solid fa-plus fa-beat-fade fa-2xs" style="color: #f3f3f3; margin-left: 15px; "></i></button>  </h3>
+        </div>
+
+        <div class="row justify-space-between py-2 mt-5">
+          {% for s in service %}
+          <div class="col-md-4 mb-4 ">
+
+          <form action="{% url 'main:service_edit' s.id %}" method="post" >
+            {% csrf_token %}
+              <div class="card shadow-lg ">
+
+                <span class="badge rounded-pill bg-light text-dark w-30 mt-n2 mx-auto"> {% trans 'Service name' %}</span>
+                <div class="input-group input-group-outline mx-auto mt-3" style="width: 80%;">
+                  <input class="form-control" type="text" placeholder="" value="{{ s.name }}" name="service_name">
+                </div>
+
+                <div class="card-header text-center pt-4 pb-3 " >
+                  <div class="form-inline mx-auto " style="width: 90%; background:rgb(243, 241, 241); border-radius:10px;">
+                    <textarea style="background-color: #ffffff;" class="form-control p-3 border border-black " id="textAreaExample1" rows="8" name="service_text">{{ s.text }}</textarea>
+                  </div>
+                </div>
+
+                <div class="row m-4">
+
+                <div class="col-md-6">
+                  <a href="{% url 'main:service_delete' s.id %}" class="btn btn-icon bg-gradient-danger d-lg-block mt-3 mb-0">
+                   {% trans ' Delete' %}
+                    <i class="fas fa-trash ms-1"></i>
+                  </a>
+
+                </div>
+                <div class="col-md-6">
+                  <button type="submit" class="btn btn-icon bg-gradient-success d-lg-block mt-3 mb-0 w-100" >
+                    {% trans 'Save' %}
+                  </button>
+                </div>
+                </div>
+
+                </div>
+              </form>
+            </div>
+            {% endfor %}
+
+
+
+            </div>
+
+          </div>
+          </div>
+        </section>
+      </div>
+
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4  mb-4 "
+     style="background-color: #ffffff!important;">
+
+    <section class="py-6 mt-4">
+      <div class="container">
+
+        <div class="card bg-success p-2 w-60 " style="margin:0 auto; float:none;">
+          <h3 class="text-center text-white font-weight-bold">{% trans 'Portfolio' %} <button class="bg-success" style="border: none;"  data-bs-toggle="modal" data-bs-target="#exampleModal2" > <i class="fa-solid fa-plus fa-beat-fade fa-2xs" style="color: #f3f3f3; margin-left: 15px; "></i></button>   </h3>
+        </div>
+
+
+        <div class="row justify-space-between py-2 mt-5">
+          {% for p in project %}
+
+
+          <div class="col-md-4 mb-4 ">
+            <form action="{% url 'main:edit_project' p.id %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="card shadow-lg ">
+
+                  <div class="card-header p-0 position-relative mt-3 mx-auto mb-1 z-index-2" style="width:350px; height:300px;" >
+                    <a class="blur-shadow-image " >
+                      <img src="{{ p.image.url }}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" style="width:100%; height:100%; ">
+                    </a>
+                  </div>
+
+                  <div class="input-group input-group-outline mx-auto mt-3"style="width: 80%;">
+                    <input type="file" name="img" value="{{ p.image }}" class="form-control">
+                  </div>
+
+                  <div class="input-group input-group-outline mx-auto mt-3" style="width: 80%;">
+                    <input class="form-control" type="text" placeholder="Project title" value="{{ p.name }}" name="project_name">
+                  </div>
+                  <div class="card-header text-center pt-4 pb-3  border" >
+                    <div class="form-inline mx-auto " style="width: 90%; background:rgb(243, 241, 241); border-radius:10px;">
+                      <textarea  style="background-color:rgb(255, 255, 255);" class="form-control p-3  border border-black" id="textAreaExample1" rows="8" name="project_text" placeholder="About project">{{ p.title }}</textarea>
+                    </div>
+                  </div>
+                  <div class="input-group input-group-outline mx-auto mt-3" style="width: 80%;">
+                    <span class="fab fa-github fa-2x me-2 mt-1"></span>
+                    <input class="form-control" type="text" placeholder="Project Github link " value="{% if p.github == None %}Project Github link{% else %}{{ p.github }}{% endif %}" name="github">
+                  </div>
+
+                  <div class="input-group input-group-outline mx-auto mt-3" style="width: 80%;">
+                    <span class="text-danger fa fa-eye fa-2x mt-1 me-1"></span>
+                    <input class="form-control" type="text" placeholder="Project Live Preview link" value="{% if p.live_link == None %}Project Live Preview link{% else %}{{ p.live_link }}{% endif %}" name="live_link">
+                  </div>
+
+                  <div class="row m-4">
+                      <div class="col-md-6">
+                        <a href="{% url 'main:project_delete' p.id %}" class="btn btn-icon bg-gradient-danger d-lg-block mt-3 mb-0">
+                          {% trans 'Delete' %}
+                          <i class="fas fa-trash ms-1"></i>
+                        </a>
+                      </div>
+                  <div class="col-md-6">
+                      <button type="submit" class="btn btn-icon bg-gradient-success d-lg-block mt-3 mb-0 w-100" >
+                        {% trans 'Save' %}
+                      </button>
+                  </div>
+                  </div>
+
+                  </div>
+                </form>
+              </div>
+          {% endfor %}
+
+
+
+          </div>
+          </div>
+        </section>
+      </div>
+
+
+
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4  mb-4 "  style="background-color:#ffffff !important;">
+    <section class="py-6 mt-4" >
+      <div class="container">
+        <div class="card bg-success p-2 w-60 " style="margin:0 auto; float:none;">
+          <h3 class="text-center text-white font-weight-bold"> {% trans 'Resume' %}  <button  id="add_resume"  class="bg-success" style="border: none;"  data-bs-toggle="modal" data-bs-target="#exampleModal5" > <i class="fa-solid fa-plus fa-beat-fade fa-2xs" style="color: #f3f3f3; margin-left: 15px; "></i></button>   </h3>
+        </div>
+
+
+          </div>
+        </section>
+      </div>
+
+  <script src="static/jquery-3.2.1.min.js"></script>
+      <script>
+        $(".msg-status").on("change", function(){
+          $id = $(this).data("id")
+          $atr = $(this).prop("checked")
+          $.ajax({
+            url:`/message/${$id}`,
+            type:"GET",
+            data:{"msg_status":$atr},
+            success:function(response){}
+
+          });
+            });
+
+
+
+      $('.dd').on('click',function(){
+        let data_id = $(this).attr('data-id');
+        //console.log(data_id)
+        $.ajax({
+          url:`/get/yonalish`,
+          type:"GET",
+          data:{'id':data_id},
+          success:function (response){
+            $('#technology').html(response.technology);
+            $('#percentage').html(`${response.percentage} %`);
+            id_ = response.id
+          }
+
+        });
+      });
+
+      $('#delete_teh').on('click', function(){
+        $.ajax({
+          url:`/delete/yonalish`,
+          type:"GET",
+          data:{'id':id_},
+          success:function (response){
+
+          }
+        });
+      });
+
+      $('#edit_teh').on('click',function(){
+        let percentage =  document.getElementById('percentage_').value
+        let technology =  document.getElementById('technology_').value
+        $.ajax({
+          url:`/edit/yonalish`,
+          type:"GET",
+          data:{'id':id_,'percentage':percentage,'technology':technology},
+          success:function (response){
+            $('#technology').html(response.technology);
+            $('#percentage').html(`${response.percentage} %`);
+          }
+        });
+      });
+      $('#edit_resume').on('click',function(){
+        let education = document.getElementById('education').value
+        let skills = document.getElementById('skills').value
+        let experience = document.getElementById('experience').value
+        let hobbies = document.getElementById('hobbies').value
+        let about = document.getElementById('about').value
+        $.ajax({
+          url:`/edit/resume`,
+          type:"GET",
+          data:{
+            education:education,
+            skills:skills,
+            experience:experience,
+            hobbies:hobbies,
+            about:about
+            }
+        });
+      });
+      $('#add_resume').on('click',function(){
+        $.ajax({
+          url:`{{request.LANGUAGE_CODE}}/get/resume`,
+          type:'GET',
+          data:{user:`{{user}}`},
+          success:function(response){
+
+          $('#education').val(response.resume.education);
+          $('#skills').val(response.resume.skills);
+          $('#experience').val(response.resume.experience);
+          $('#hobbies').val(response.resume.hobbies);
+          $('#about').val(response.resume.about);
+          }
+        });
+      });
+      </script>
+  {% endblock content %}

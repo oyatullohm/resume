@@ -1,0 +1,91 @@
+{% extends 'wrapper.html'%}
+
+{% block title %}
+<title>Resume</title>
+{% endblock %}
+
+{% block content%}
+{% load i18n %}
+<style>
+    .dataTables_length {
+        display:  none !important;
+      }
+      #myTable_filter input{
+        margin-top: 5px !important;
+        margin-left: 10px !important;
+        border-radius: 25px !important;
+        border-color: rgb(234, 255, 0);
+        background-color: rgb(255, 255, 255);
+      }
+      .dataTables_info{
+        display: none !important;
+      }
+</style>
+
+<section class="my-5 py-5" style="background-image: url(&#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&#39;);" loading="lazy">
+    <div class="container  " >
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="table-responsive">
+              <table id="myTable" class="table align-items-center mb-0">
+                <thead>
+                  <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">N</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">{% trans 'Name' %}</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> {% trans 'Phone' %}</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">{% trans 'Downland' %}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for  r in  resume %}
+                    <tr>
+                      <td>
+                        <span class="badge badge-dot me-4">
+                          <span class="text-dark text-xs">{{forloop.counter}}  </span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="badge badge-dot me-4">
+                          <span class="text-dark text-xs">{{r.name}}  </span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="badge badge-dot me-4">
+                          <span class="text-dark ">{{r.email}} </span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="badge badge-dot me-4">
+                          <span class="text-dark text-xs">{{r.phone}} </span>
+                        </span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center">
+                          <span class="text-dark text-xs">
+                            <form action="{{ request.LANGUAGE_CODE }}/downland_archive_resume" method="get">
+                                <input type="text" name="id" value="{{r.id}}" id="" style="display: none;">
+                                 <button type="submit"  class="  btn bg-gradient-success btn-sm">{% trans 'Downland' %}</button>
+                            </form>
+                            </span>
+                        </div>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+    $('#myTable').DataTable();
+
+
+</script>
+{% endblock %}
