@@ -16,14 +16,14 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    path('admin/', admin.site.urls),
+    path('--admin/', admin.site.urls),
     path('',include('main.urls',namespace='main')),
     path('accounts/', include('allauth.urls')),
 
 )
 
 
-if 'rosetta' in settings.INSTALLED_APPS:
+if '--rosetta' in settings.INSTALLED_APPS:
     urlpatterns += [
         path('rosetta/', include('rosetta.urls'))
     ]
