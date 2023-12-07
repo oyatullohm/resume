@@ -278,7 +278,13 @@
 
                   <div class="row">
                     <div class="col-lg-12 mx-auto d-flex justify-content-center flex-column ">
+                      <div class="col-md-12">
+                        <label   style="color: #0f0f0f;" for="floatingTextarea" id="about_">{% trans 'About' %}</label>
 
+                        <div class="form-floating">
+                          <textarea class="form-control border" value="" placeholder="Leave a comment here" id="about" name="about"></textarea>
+                        </div>
+                      </div>
                       <div class="col-md-12">
                         <label style="color: #0f0f0f;" class="form-label" id="education_" >{% trans 'Education' %}</label>
                         <div class="input-group input-group-outline ">
@@ -299,13 +305,7 @@
                             <textarea class="form-control border" placeholder="Leave a comment here" id="experience" name="experience"></textarea>
                           </div>
                         </div>
-                        <div class="col-md-12">
-                          <label   style="color: #0f0f0f;" for="floatingTextarea" id="about_">{% trans 'About' %}</label>
 
-                          <div class="form-floating">
-                            <textarea class="form-control border" value="" placeholder="Leave a comment here" id="about" name="about"></textarea>
-                          </div>
-                        </div>
                         <div class="col-md-12">
                           <label  style="color: #0f0f0f;" class="form-label" id="hobbies_"  >{% trans 'Hobbies' %}</label>
 
@@ -391,9 +391,10 @@
 
 
                   <div class="col-md-6  mt-4">
+                    <label class="form-label"> {% trans 'Master' %} </label>
                     <div class="input-group input-group-static mb-4">
                       <select class="form-control" id="exampleFormControlSelect1" name="master">
-                        <option value="{{user.master.id}}" selected> {% trans 'Master' %} {{user.master}} </option>
+                        <option value="{{user.master.id}}" selected>  {{user.master}} </option>
                         {% for m in master %}
 
                         <option value="{{ m.id }}">{{ m }}</option>
@@ -403,6 +404,7 @@
                      </div>
                   </div>
                   <div class="col-md-6 mt-4">
+                    <label class="form-label"> {% trans 'Level' %} </label>
                     <div class="input-group input-group-static mb-4">
                       <select class="form-control" id="exampleFormControlSelect1" name="masterlevel">
                         <option   class=" bg-dark"  value="{{user.masterlevel.id}}"> {{user.masterlevel.level }} </option>
@@ -498,7 +500,7 @@
   </div>
 
 
-  <div class="card card-body blur shadow-blur mx-3 mx-md-4  mb-4 " style="background-color: rgb(255, 255, 255) !important;" >
+  <div id="technology" class="card card-body blur shadow-blur mx-3 mx-md-4  mb-4 " style="background-color: rgb(255, 255, 255) !important;" >
 
   <section class="py-6 mt-4">
     <div class="container">
@@ -744,6 +746,8 @@
           }
         });
       });
+
+
       $('#edit_resume').on('click',function(){
         let education = document.getElementById('education').value
         let skills = document.getElementById('skills').value

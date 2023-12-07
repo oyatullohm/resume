@@ -38,8 +38,8 @@ def edit_resume(request):
     education = request.GET.get('education',None)
     skills = request.GET.get('skills')
     experience = request.GET.get('experience',None)
-    hobbies = request.GET.get('experience',None)
     about = request.GET.get('about',None)
+    hobbies = request.GET.get('hobbies',None)
     resume = user.resumes.all()
     if resume:
         index = len(resume)
@@ -64,6 +64,7 @@ def get_resume(request):
     user= request.user
     resume = user.resumes.all()
     if resume:
+
         index = len(resume)
         r = resume[index-1]
         resume = {'education':r.education,
@@ -72,6 +73,7 @@ def get_resume(request):
                   'hobbies':r.hobbies,
                   'about':r.about
                   }
+
         return JsonResponse({'status': 'ok','resume':resume})
     return JsonResponse({'status': 'ok'})
 

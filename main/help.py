@@ -157,7 +157,7 @@ class Password_reset(View):
     def get(self,request):
         from django.utils import timezone
 
-        now = timezone.now() + timedelta(minutes=305)
+        now = timezone.now() + timedelta(minutes=292)
         try :
             email_login = request.GET.get('login')
             user = CustomUser.objects.get(Q(username=email_login)|Q(email=email_login))
@@ -181,9 +181,12 @@ def ver_code(request):
 def edit_password(request):
     id = request.session['id']
     password = request.POST.get('password_1')
-    user = CustomUser.objects.get(id=int(id))
-    user.set_password(password)
-    user.save()
+    password_2 = request.POST.get('password_2')
+    if password == password_2:
+        user = CustomUser.objects.get(id=int(id))
+        user.set_password(password)
+        user.save()
+        messages.success(request, "password reset")
     return redirect(f'/{request.LANGUAGE_CODE}')
 
 
@@ -196,7 +199,7 @@ def post_technology(request):
     user = request.user
     Yonalish.objects.create(user=user,technology=technology,percentage=int(percentage))
 
-    return redirect (f'/{request.LANGUAGE_CODE}/profil/{request.user.id}/{request.user.username}')
+    return redirect (f'/{request.LANGUAGE_CODE}/profil/{request.user.id}/{request.user.username}#technology')
 
 def create_service(request):
     icon = str(request.POST['icon'])

@@ -9,8 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-&y+=*pym#n0fgg7*i$ytfg3lvh+%$2opa&8or*tv6b0swaqx$w'
 
-DEBUG = False
-# DEBUG =  True
+# DEBUG = False
+DEBUG =  True
 
 
 ALLOWED_HOSTS = ['www.my.activeresume.uz','my.activeresume.uz','127.0.0.1']
@@ -73,9 +73,6 @@ TEMPLATES = [
 
 ALLOW_PARALLEL_RUNS = True
 SOCIALACCOUNT_LOGIN_ON_GET=True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-
 
 
 
@@ -176,7 +173,7 @@ EMAIL_HOST_PASSWORD = 'Aa@9005233'
 EMAIL_PORT          = 587
 EMAIL_USE_TLS       = True
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'http://my.activeresume.uz'
 LOGOUT_REDIRECT_URL = '/'
 
 # LOGGING = {
