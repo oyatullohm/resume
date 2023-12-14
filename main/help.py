@@ -201,8 +201,11 @@ def post_technology(request):
 
     return redirect (f'/{request.LANGUAGE_CODE}/profil/{request.user.id}/{request.user.username}#technology')
 
+import os 
+
 def create_service(request):
     icon = str(request.POST['icon'])
+    
     name = str(request.POST['service_name'])
     text = str(request.POST['service_text'])
     user = request.user

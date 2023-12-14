@@ -1,11 +1,11 @@
 {% extends 'wrapper.html' %}
-{% block title %}
-<title> Login </title>
-{% endblock %}
 {% load i18n %}
+{% block title %}
+<title> {% trans 'Login ' %} </title>
+{% endblock %}
 {% load socialaccount %}
 {% block content %}
-  <div class="page-header align-items-start min-vh-100"   
+  <div class="page-header align-items-start min-vh-100"
             style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80'); 
             " loading="lazy">
     <span class="mask bg-gradient-dark opacity-6"></span>
@@ -53,7 +53,7 @@
               </button>
     <button class="btn btn-outline-info">
            <i class="fab fa-google"></i>
-            <a href="/accounts/google/login/"> {% trans 'Sigh up with' %} Google</a>
+            <a href="{% provider_login_url 'google' %}"> {% trans 'Sigh up with' %} Google</a>
     </button><br>
             </div>
           </div>

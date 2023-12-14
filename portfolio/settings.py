@@ -4,16 +4,14 @@
 import os
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+import environ
+env = environ.Env()
+env.read_env()
 # from .local_settings import SECRET_KEY
 
-SECRET_KEY = 'django-insecure-&y+=*pym#n0fgg7*i$ytfg3lvh+%$2opa&8or*tv6b0swaqx$w'
-
-# DEBUG = False
-DEBUG =  True
-
-
-ALLOWED_HOSTS = ['www.my.activeresume.uz','my.activeresume.uz','127.0.0.1']
+SECRET_KEY = env.str('SECRET_KEY')
+DEBUG = False
+ALLOWED_HOSTS = ['*']
 
 
 SITE_ID = 1
@@ -29,11 +27,10 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-
     'django.contrib.staticfiles',
-
     'main',
     'rosetta',
+    'storages',
 
 ]
 
@@ -147,16 +144,28 @@ LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),)
 
 STATIC_ROOT = os.path.join(BASE_DIR  / "static")
 STATIC_URL = '/static/'
-# MEDIA_ROOT = '/media/'
 
-STATICFILES_DIRS = (
-     os.path.join(BASE_DIR / "staticfiles"),
-)
+# STATICFILES_DIRS = (
+#      os.path.join(BASE_DIR / "staticfiles"),
+# )
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR , "media")
+# MEDIA_URL = "/media/"
+# MEDIA_ROOT = os.path.join(BASE_DIR , "media")
+# STATIC_URL = 'static/'
+AWS_ACCESS_KEY_ID = env.str('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = env.str('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME =env.str('AWS_STORAGE_BUCKET_NAME')
+AWS_DEFAULT_ACL =env.str('AWS_DEFAULT_ACL')
+AWS_S3_ENDPOINT_URL =env.str('AWS_S3_ENDPOINT_URL')
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400'
+}
 
 
+AWS_MEDIA_LOCATION = 'media'
+PUBLIC_MEDIA_LOCATION = 'media'
+MEDIA_URL = f'{AWS_S3_ENDPOINT_URL}/{AWS_MEDIA_LOCATION}/'
+DEFAULT_FILE_STORAGE = 'portfolio.cloud_.MediaStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'main.CustomUser'
@@ -164,16 +173,16 @@ AUTH_USER_MODEL = 'main.CustomUser'
 
 # Bottom of the file
 
-EMAIL_BACKEND       = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST          = 'smtp.yandex.ru'
-DEFAULT_FROM_EMAIL  = 'oyatulloh1988@yandex.com'
-EMAIL_HOST_USER     = 'oyatulloh1988@yandex.com'
-SERVER_EMAIL        = 'oyatulloh1988@yandex.com'
-EMAIL_HOST_PASSWORD = 'Aa@9005233'
-EMAIL_PORT          = 587
+EMAIL_BACKEND= env.str('EMAIL_BACKEND')
+EMAIL_HOST          = env.str('EMAIL_HOST')
+DEFAULT_FROM_EMAIL  = env.str('DEFAULT_FROM_EMAIL')
+EMAIL_HOST_USER     = env.str('EMAIL_HOST_USER')
+SERVER_EMAIL        = env.str('SERVER_EMAIL')
+EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
+EMAIL_PORT          = env.int('EMAIL_PORT')
 EMAIL_USE_TLS       = True
 
-LOGIN_REDIRECT_URL = 'http://my.activeresume.uz'
+LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 # LOGGING = {

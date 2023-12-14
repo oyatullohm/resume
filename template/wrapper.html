@@ -190,11 +190,11 @@
        <a style="margin-left: 22px;" href="{% url 'main:logout' %}" class="btn bg-gradient-dark btn-sm   mb-0 me-2 mt-2 mt-md-0"><span class="fa-solid fa-arrow-right-from-bracket me-2"></span>{% trans 'Log out' %}</a>
        {% if request.user.img %}
          <a style="margin-left: 22px;" href="{{request.LANGUAGE_CODE}}/profil/{{request.user.id}}/{{user.username}}" class="active  btn bg-gradient-dark btn-sm   mb-0 me-2 mt-2 mt-md-0">{% trans 'Edit profile ' %}</a>
-         <a style="margin-left: 22px;" href="/{{ request.LANGUAGE_CODE }}/user/{{user.username}}"><img class="img-fluid "  src="{{ request.user.img.url }}" alt="bruce" loading="lazy" style="width: 45px;  height: 45px !important; border-radius:50%; margin-right:0px !important;"></a>
+         <a style="margin-left: 22px;" href="/{{ request.LANGUAGE_CODE }}/user/{{user.username}}"><img class="img-fluid "  src="https://django-media.fra1.digitaloceanspaces.com/media/{{ request.user.img}}" alt="bruce" loading="lazy" style="width: 45px;  height: 45px !important; border-radius:50%; margin-right:0px !important;"></a>
 
          {% else %}
          <a style="margin-left: 22px;" href="{{request.LANGUAGE_CODE}}/profil/{{request.user.id}}/{{user.username}}" class="active  btn bg-gradient-dark btn-sm   mb-0 me-2 mt-2 mt-md-0">{% trans 'Edit profile '%}</a>
-         <a style="margin-left: 22px;" href="{{request.LANGUAGE_CODE}}/user/{{user.username}}" ><img class="img-fluid"   src="/media/user_images/profil.png" alt="bruce" loading="lazy"  style="width: 45px;  height: 45px !important; border-radius:50%; margin-right:0px !important;"></a>
+         <a style="margin-left: 22px;" href="{{request.LANGUAGE_CODE}}/user/{{user.username}}" ><img class="img-fluid"   src="/static/assets/img/æ¡¿¼«¬ φ¬αá¡á «Γ 2023-04-09 15-08-46.png" alt="bruce" loading="lazy"  style="width: 45px;  height: 45px !important; border-radius:50%; margin-right:0px !important;"></a>
 
          {% endif %}
          {% else %}
@@ -388,7 +388,6 @@
     </div>
 
   </footer>
-
 </div>
 
 </body>

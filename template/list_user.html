@@ -53,11 +53,11 @@
                         <div>
                           {% if d.img %}
                           <a href="javascript:;" class="avatar avatar-lg rounded-circle">
-                            <img  style="height: 45px; width: 45px;" alt="Image placeholder" src="{{ d.img.url }}">
+                            <img  style="height: 45px; width: 45px;" alt="Image placeholder" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ d.img }}">
                           </a>
                           {% else %}
                           <a href="javascript:;" class="avatar avatar-lg rounded-circle">
-                            <img style="height: 45px; width: 45px;" alt="Image placeholder" src="/media/user_images/profil.png">
+                            <img style="height: 45px; width: 45px;" alt="Image placeholder" src="/static/assets/img/profil.png">
                           </a>
                           {% endif %}
                         </div>

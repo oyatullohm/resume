@@ -82,29 +82,29 @@
                             <div class="col-md-12">
                               <div class="input-group input-group-dynamic mb-4">
                                 <select class="form-control" id="exampleFormControlSelect1" name="icon">
-                                  <option value="/media/service_icon/icons8-server-64.png" selected>Server</option>
-                                  <option value="/media/service_icon/icons8-designthinking-64.png" selected>Dizayner</option>
-                                  <option value="/media/service_icon/icons8-database-64.png" selected>Database</option>
-                                  <option value="/media/service_icon/icons8-figma-64.png" selected>Figma</option>
-                                  <option value="/media/service_icon/icons8-mentor-64.png" selected>Mentor</option>
-                                  <option value="/media/service_icon/icons8-bots-64.png" selected>Bots</option>
-                                  <option value="/media/service_icon/icons8-settings.gif" selected>Back-end</option>
-                                  <option value="/media/service_icon/icons8-telegram-app-64.png" selected>Mobil app</option>
-                                  <option value="/media/service_icon/icons8-front-end-64.png" selected>Front-end</option>
-                                  <option value="/media/service_icon/icons8-web-app-64.png" selected>Web app</option>
-                                  <option value="/media/service_icon/icons8-developer-64.png" selected>Devoloper</option>
-                                  <option value="/media/service_icon/icons8-function-64.png" selected>Function</option>
-                                  <option value="/media/service_icon/icons8-object-oriented-programming-64.png" selected>Class</option>
-                                  <option value="/media/service_icon/icons8-ai-64.png" selected>ai</option>
-                                  <option value="/media/service_icon/icons8-desktop-64.png" selected>Desctop</option>
-                                  <option value="/media/service_icon/icons8-robotic-arm-64.png" selected>  Machine  </option>
-                                  <option value="/media/service_icon/icons8-book-64.png" selected>  Book  </option>
-                                  <option value="/media/service_icon/icons8-devops-64.png" selected> Devops   </option>
-                                  <option value="/media/service_icon/icons8-webpage-protection-64.png" selected> Webpage Protection </option>
-                                  <option value="/media/service_icon/icons8-bank-64.png" selected> Bank Service </option>
-                                  <option value="/media/service_icon/icons8-credit-card-transfer-64.png" selected>Money transfer  </option>
-                                  <option value="/media/service_icon/icons8-card-exchange-64.png" selected> Another </option>
-                                  <!-- <img src="" alt=""> -->
+                                  <option value="/static/assets/img/service_icon/icons8-server-64.png" selected>Server</option>
+                                  <option value="/static/assets/img/service_icon/icons8-designthinking-64.png" selected>Dizayner</option>
+                                  <option value="/static/assets/img/service_icon/icons8-database-64.png" selected>Database</option>
+                                  <option value="/static/assets/img/service_icon/icons8-figma-64.png" selected>Figma</option>
+                                  <option value="/static/assets/img/service_icon/icons8-mentor-64.png" selected>Mentor</option>
+                                  <option value="/static/assets/img/service_icon/icons8-bots-64.png" selected>Bots</option>
+                                  <option value="/static/assets/img/service_icon/icons8-settings.gif" selected>Back-end</option>
+                                  <option value="/static/assets/img/service_icon/icons8-telegram-app-64.png" selected>Mobil app</option>
+                                  <option value="/static/assets/img/service_icon/icons8-front-end-64.png" selected>Front-end</option>
+                                  <option value="/static/assets/img/service_icon/icons8-web-app-64.png" selected>Web app</option>
+                                  <option value="/static/assets/img/service_icon/icons8-developer-64.png" selected>Devoloper</option>
+                                  <option value="/static/assets/img/service_icon/icons8-function-64.png" selected>Function</option>
+                                  <option value="/static/assets/img/service_icon/icons8-object-oriented-programming-64.png" selected>Class</option>
+                                  <option value="/static/assets/img/service_icon/icons8-ai-64.png" selected>ai</option>
+                                  <option value="/static/assets/img/service_icon/icons8-desktop-64.png" selected>Desctop</option>
+                                  <option value="/static/assets/img/service_icon/icons8-robotic-arm-64.png" selected>  Machine  </option>
+                                  <option value="/static/assets/img/service_icon/icons8-book-64.png" selected>  Book  </option>
+                                  <option value="/static/assets/img/service_icon/icons8-devops-64.png" selected> Devops   </option>
+                                  <option value="/static/assets/img/service_icon/icons8-webpage-protection-64.png" selected> Webpage Protection </option>
+                                  <option value="/static/assets/img/service_icon/icons8-bank-64.png" selected> Bank Service </option>
+                                  <option value="/static/assets/img/service_icon/icons8-credit-card-transfer-64.png" selected>Money transfer  </option>
+                                  <option value="/static/assets/img/service_icon/icons8-card-exchange-64.png" selected> Another </option>
+                                  <!-- <img src="/static/assets/img/service_icon/icons8-bank-64.png" alt=""> -->
                                 </select>
                               </div>
                             </div>
@@ -349,11 +349,11 @@
             <div class="mt-n8 mt-md-n12 text-center">
               {% if user.img %}
               <a class="avatar avatar-xl rounded-circle">
-                <img alt="Image placeholder" src="{{ user.img.url }}" style="width: 250px!important; height: 250px !important;">
+                <img alt="Image placeholder" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ request.user.img}}" style="width: 250px!important; height: 250px !important;">
               </a>
 
               {% else %}
-              <img class="img-fluid" src="/media/user_images/profil.png" alt="bruce" loading="lazy" style="width: 250px; border-radius:50%;">
+              <img class="img-fluid" src="/static/assets/img/æ¡¿¼«¬ φ¬αá¡á «Γ 2023-04-09 15-08-46.png" alt="bruce" loading="lazy" style="width: 250px; border-radius:50%;">
               {% endif %}
             </div>
             <div class="row py-5" >
@@ -623,7 +623,7 @@
 
                   <div class="card-header p-0 position-relative mt-3 mx-auto mb-1 z-index-2" style="width:350px; height:300px;" >
                     <a class="blur-shadow-image " >
-                      <img src="{{ p.image.url }}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" style="width:100%; height:100%; ">
+                      <img src="https://django-media.fra1.digitaloceanspaces.com/media/{{p.image }}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" style="width:100%; height:100%; ">
                     </a>
                   </div>
 

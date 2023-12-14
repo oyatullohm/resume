@@ -47,7 +47,7 @@ class Yonalish(models.Model):
 class Service(models.Model):
     """ developer qanaqa  xizmat ko'rsata  oladi  """
     user = models.ForeignKey(CustomUser, on_delete = models.CASCADE,related_name='services')
-    icon = models.CharField(max_length=55)
+    icon = models.CharField(max_length=155)
     name = models.CharField('hizmat turi ',max_length=55)
     text = models.TextField('batafsil malumot')
     def __str__(self):

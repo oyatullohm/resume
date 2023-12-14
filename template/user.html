@@ -245,9 +245,9 @@
 
     <div class="col">
       {% if user.img %}
-        <img style="margin-top: 44px !important;" src="{{user.img.url}}" width="300px"  alt="">
+        <img style="margin-top: 44px !important;" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ request.user.img}}" width="300px"  alt="">
         {% else %}
-        <img style="margin-top: 44px !important;" src="/media/user_images/profil.png" width="300px"  alt="">
+        <img style="margin-top: 44px !important;" src="/static/assets/img/æ¡¿¼«¬ φ¬αá¡á «Γ 2023-04-09 15-08-46.png" width="300px"  alt="">
       {% endif %}
     </div>
     <div class="col-lg-8 pt-4 pt-lg-0 content">
@@ -316,7 +316,7 @@
     <div id="resume">
               {% if user.img %}
 
-              <img src="{{user.img.url}}" alt="{{ user.username }} ">
+              <img src="https://django-media.fra1.digitaloceanspaces.com/media/{{ request.user.img}}" alt="{{ user.username }} ">
                 {% endif %}
                 <h1 class="" style="font-size :50px !important;" >{{user.username | upper }} </h1>
                 <p>  {% trans 'Birthday' %}:  {{user.birthday}}
@@ -363,7 +363,7 @@
             </div>
         <div class="col-12 " style="margin-left: 40%;">
 
-          <p id="p1" style="display: none;"> http://my.activeresume.uz/{{ request.LANGUAGE_CODE }}/user/{{user.username}}</p>
+          <p id="p1" style="display: none;"> https://my.activeresume.uz/{{ request.LANGUAGE_CODE }}/user/{{user.username}}</p>
 
           <form action=" {{ request.LANGUAGE_CODE }}/pdf" method="post" >
             {% csrf_token %}
@@ -393,8 +393,8 @@
     <div class="col"style="margin-top: 5px;">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title"><i class="fa-solid  fa-beat-fade fa-2xl" style="color: #3dbd85;"><img src="{{i.icon}}" alt=""></i></h5>
           <h5 class="card-title">{{i.name}}</h5>
+          <h5 class="card-title"><i class="fa-solid  fa-beat-fade fa-2xl" style="color: #3dbd85;"><img src="{{i.icon}}" alt=""></i></h5>
           <p class="card-text">{{i.text}}</p>
         </div>
       </div>
@@ -413,7 +413,7 @@
 
         <div class="card" style="width: 18rem; margin-top: 5px;">
             <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <img style="width: 285px;  height: 285px ;" src="{{ p.image.url }}" class=" card-img-top" alt="..." >
+            <img style="width: 285px;  height: 285px ;" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ p.image}}" class=" card-img-top" alt="..." >
             <div class="card-body">
                 <h5 class="card-title">{{p.name}}</h5>
                 <p class="card-text">{{p.title}}</p>

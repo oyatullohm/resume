@@ -1,7 +1,7 @@
 {% extends 'wrapper.html' %}
 {% load i18n %}
 {% block title %}
-<title>Home</title>
+<title>{% trans 'Home' %}</title>
 {% endblock %}
 
 {% block content %}
@@ -12,9 +12,10 @@
       {% for  m in master %}
       <div  style="margin-top: 22px;" class="col-6 col-sm-3">
         <div class="card ">
-          <span class="text-dark text-center">{{m.name}} </span>
+          <span class="text-dark text-center">{{m.name}}  </span>
            <span class="badge badge-dot me-4">
-                           <img src="{{ m.img.url }}"  style="margin-left : 22px ;" class=" avatar avatar-sm rounded-circle me-2"> 
+
+                           <img src=" https://django-media.fra1.digitaloceanspaces.com/media/{{ m.img }}"  style="margin-left : 22px ;" class=" avatar avatar-sm rounded-circle me-2"> 
              </span>
 
               <span class="text-dark text-center">
@@ -28,7 +29,7 @@
         <div class="card ">
           <span class="text-dark text-center"> {% trans 'All' %}</span>
            <span class="badge badge-dot me-4">
-                           <img src="/media/service_icon/icons8-card-exchange-64.png"  style="margin-left : 22px ;" class=" avatar avatar-sm rounded-circle me-2">
+                           <img src="/static/assets/img/service_icon/icons8-card-exchange-64.png"  style="margin-left : 22px ;" class=" avatar avatar-sm rounded-circle me-2">
              </span>
 
               <span class="text-dark text-center">
