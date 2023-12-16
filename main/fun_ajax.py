@@ -34,6 +34,12 @@ def get_yonalish(request):
 
 
 def edit_resume(request):
+    print(000000)
+    print(000000)
+    print(000000)
+    print(000000)
+    print(000000)
+    print(000000)
     user = request.user
     education = request.GET.get('education',None)
     skills = request.GET.get('skills')
@@ -42,6 +48,10 @@ def edit_resume(request):
     hobbies = request.GET.get('hobbies',None)
     resume = user.resumes.all()
     if resume:
+        print(1)
+        print(1)
+        print(1)
+        print(1)
         index = len(resume)
         resume = resume[index-1]
         resume.education = education
@@ -57,14 +67,21 @@ def edit_resume(request):
         skills=skills,hobbies=hobbies,
         about=about
     )
+    print(2)
+    print(2)
+    print(2)
+    print(2)
     # messages.success(request, "resume created !")
     return JsonResponse({'status': 'ok'})
 
 def get_resume(request):
+    print(3333)
+    print(3333)
+    print(3333)
+    print(3333)
     user= request.user
     resume = user.resumes.all()
     if resume:
-
         index = len(resume)
         r = resume[index-1]
         resume = {'education':r.education,
@@ -75,6 +92,7 @@ def get_resume(request):
                   }
 
         return JsonResponse({'status': 'ok','resume':resume})
+    print(4444)
     return JsonResponse({'status': 'ok'})
 
 

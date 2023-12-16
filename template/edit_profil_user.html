@@ -88,7 +88,7 @@
                                   <option value="/static/assets/img/service_icon/icons8-figma-64.png" selected>Figma</option>
                                   <option value="/static/assets/img/service_icon/icons8-mentor-64.png" selected>Mentor</option>
                                   <option value="/static/assets/img/service_icon/icons8-bots-64.png" selected>Bots</option>
-                                  <option value="/static/assets/img/service_icon/icons8-settings.gif" selected>Back-end</option>
+                                  <option value="/static/assets/img/service_icon/icons8-settings-64.png" selected>Back-end</option>
                                   <option value="/static/assets/img/service_icon/icons8-telegram-app-64.png" selected>Mobil app</option>
                                   <option value="/static/assets/img/service_icon/icons8-front-end-64.png" selected>Front-end</option>
                                   <option value="/static/assets/img/service_icon/icons8-web-app-64.png" selected>Web app</option>
@@ -349,7 +349,7 @@
             <div class="mt-n8 mt-md-n12 text-center">
               {% if user.img %}
               <a class="avatar avatar-xl rounded-circle">
-                <img alt="Image placeholder" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ request.user.img}}" style="width: 250px!important; height: 250px !important;">
+                <img alt="Image placeholder" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ request.user.img}}" style=" height: 250px !important; width: 250px!important; ">
               </a>
 
               {% else %}
@@ -527,7 +527,7 @@
             </a>
           </div>
         </div>
-        <div class="progress">
+        <div class="">
           <div class="progress-bar " role="progressbar" aria-valuenow="{{ c.pencentage }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ c.percentage }}%;  {%  bg_color forloop.counter %} ">
 
           </div>
@@ -696,7 +696,7 @@
           $id = $(this).data("id")
           $atr = $(this).prop("checked")
           $.ajax({
-            url:`/message/${$id}`,
+            url:`{{request.LANGUAGE_CODE}}/message/${$id}`,
             type:"GET",
             data:{"msg_status":$atr},
             success:function(response){}
@@ -710,7 +710,7 @@
         let data_id = $(this).attr('data-id');
         //console.log(data_id)
         $.ajax({
-          url:`/get/yonalish`,
+          url:`{{request.LANGUAGE_CODE}}/get/yonalish`,
           type:"GET",
           data:{'id':data_id},
           success:function (response){
@@ -724,7 +724,7 @@
 
       $('#delete_teh').on('click', function(){
         $.ajax({
-          url:`/delete/yonalish`,
+          url:`{{request.LANGUAGE_CODE}}/delete/yonalish`,
           type:"GET",
           data:{'id':id_},
           success:function (response){
@@ -755,7 +755,7 @@
         let hobbies = document.getElementById('hobbies').value
         let about = document.getElementById('about').value
         $.ajax({
-          url:`/edit/resume`,
+          url:`{{request.LANGUAGE_CODE}}/edit/resume`,
           type:"GET",
           data:{
             education:education,
