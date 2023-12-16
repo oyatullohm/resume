@@ -410,30 +410,29 @@
 <div class="container " style="margin-top: 70px;">
   <div class="row">
 
+    
     {% for p in user.projects.all %}
     {% if forloop.counter == 1 %}
-    <h3 class="text-center">   {% trans 'Portfolio' %}</h3>
+    <h3 class="text-center" >   {% trans 'Portfolio' %}</h3>
     {% endif %}
-    <div class="col">
-
-        <div class="card" style="width: 18rem; margin-top: 5px;">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <img style="width: 285px;  height: 285px ;" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ p.image}}" class=" card-img-top" alt="..." >
-            <div class="card-body">
-                <h5 class="card-title">{{p.name}}</h5>
-                <p class="card-text">{{p.title}}</p>
-                {% if p.live_link %}
-                <a href="{{p.live_link}}" class="btn btn-primary"> {% trans 'live_link' %}</a>
-                {% else %}
-                <a class="btn btn-primary"> None</a>
-                {% endif %}
-                {% if p.github %}
-                <a href="{{p.github}}" class="btn btn-primary">github </a>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-    {% endfor %}
+    <div style="margin-top: 70px!important;" class="">
+      <!-- Card image -->
+      <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+        <img class="  w-60" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ p.image}}" alt="Image placeholder">
+       </div>
+      <div class="card-body">
+       <h4 class="font-weight-normal mt-3">{{p.name}}</h4>
+       <p class="card-text mb-4">{{p.title}}</p>
+       {% if p.live_link %}
+       <a href="{{p.live_link}}" class="btn bg-gradient-dark btn-sm "> {% trans 'live_link' %}</a>
+       {% endif %}
+       {% if p.github %}
+       <a href="{{p.github}}" class="btn bg-gradient-dark btn-sm ">github </a>
+       {% endif %}
+      </div>
+   </div>
+      {% endfor %}
+ 
 </div>
 </div>
 
