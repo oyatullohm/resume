@@ -248,7 +248,7 @@
                             </button>
                       </div>
                       <div class="col-md-12">
-                          <a href="/profil/{{user.id}}/{{user.username}}"   class="btn btn-icon bg-gradient-danger d-lg-block mt-3 mb-0 w-100" id="delete_teh" >
+                          <a href="/{{request.LANGUAGE_CODE}}/profil/{{user.id}}/{{user.username}}"   class="btn btn-icon bg-gradient-danger d-lg-block mt-3 mb-0 w-100" id="delete_teh" >
                             {% trans 'delete' %}
                           </a>
                       </div>
@@ -348,8 +348,8 @@
           <div class="col-12 mx-auto">
             <div class="mt-n8 mt-md-n12 text-center">
               {% if user.img %}
-              <a class="avatar avatar-xl rounded-circle">
-                <img alt="Image placeholder" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ request.user.img}}" style=" height: 250px !important; width: 250px!important; ">
+              <a class="">
+                <img alt="Avatar" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ request.user.img}}" style=" height: 250px !important; width: 250px!important;  border-radius: 50%!important; ">
               </a>
 
               {% else %}
@@ -737,7 +737,7 @@
         let percentage =  document.getElementById('percentage_').value
         let technology =  document.getElementById('technology_').value
         $.ajax({
-          url:`/edit/yonalish`,
+          url:`{{request.LANGUAGE_CODE}}/edit/yonalish`,
           type:"GET",
           data:{'id':id_,'percentage':percentage,'technology':technology},
           success:function (response){

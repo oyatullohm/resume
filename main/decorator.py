@@ -48,5 +48,3 @@ def create_verification_code():
     return "".join(random.sample([str(num) for num in range(0,10) ], 6 ))
 
 
-
-

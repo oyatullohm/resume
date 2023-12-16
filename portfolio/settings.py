@@ -11,7 +11,7 @@ env.read_env()
 
 SECRET_KEY = env.str('SECRET_KEY')
 DEBUG = False
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [ 'my.activeresume.uz','127.0.0.1']
 
 
 SITE_ID = 1

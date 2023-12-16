@@ -215,7 +215,7 @@
           <li><a class="dropdown-item" href="{{request.LANGUAGE_CODE}}/profil/{{user.id}}/{{user.username}}"> <img src="media/icons8-edit-22.png" width="20px"  alt="">    {% trans 'Edit profil ' %}</a></li>
           <li><a class="dropdown-item"  href="{% url 'main:logout' %}" ><img src="media/icons8-logout-22.png" width="20px"  alt="">  {% trans 'Log out ' %}</a></li>
           {% else %}
-          <li><a class="dropdown-item"  href="{{ request.LANGUAGE_CODE}}/accounts/login" ><img src="media/icons8-login-22.png" width="20px"  alt=""> {% trans 'Login' %} </a></li>
+          <li><a class="dropdown-item"  href="{{ request.LANGUAGE_CODE}}/accounts/login/" ><img src="media/icons8-login-22.png" width="20px"  alt=""> {% trans 'Login' %} </a></li>
           <li><a class="dropdown-item"  href="{% url 'main:register' %}" ><img src="media/icons8-register-22.png" width="20px"  alt="">{% trans 'Sign up ' %}</a></li>
           <a href="" class=""></a>
          {% endif %}
@@ -244,7 +244,7 @@
 
     <div class="col">
       {% if user.img %}
-        <img style="margin-top: 44px !important;" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ request.user.img}}" width="300px"  alt="">
+        <img style="margin-top: 44px !important; width: 330px !important; height: 300px !important; " src="https://django-media.fra1.digitaloceanspaces.com/media/{{ user.img}}"   alt="">
         {% else %}
         <img style="margin-top: 44px !important;" src="/static/assets/img/æ¡¿¼«¬ φ¬αá¡á «Γ 2023-04-09 15-08-46.png" width="300px"  alt="">
       {% endif %}
@@ -315,8 +315,7 @@
 
     <div id="resume">
               {% if user.img %}
-
-              <img src="https://django-media.fra1.digitaloceanspaces.com/media/{{ request.user.img}}" alt="{{ user.username }} ">
+              <img style="width: 500px!important;height: 250px!important; " src="https://django-media.fra1.digitaloceanspaces.com/media/{{user.img}}" alt="{{ user.username }} ">
                 {% endif %}
                 <h1 class="" style="font-size :50px !important;" >{{user.username | upper }} </h1>
                 <p>  {% trans 'Birthday' %}:  {{user.birthday}}

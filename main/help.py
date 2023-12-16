@@ -3,7 +3,7 @@ from django.shortcuts import redirect ,render
 from .models import  CustomUser,Master ,MasterLevel , Yonalish ,Service,Project ,Resume
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
-from .decorator import check_image , deco_is_authenticated ,deco_user ,create_verification_code
+from .decorator import check_image , deco_is_authenticated ,deco_user ,create_verification_code 
 from django.http import HttpResponse
 from django.template import loader
 from django.db.models import Q
@@ -131,6 +131,13 @@ def edit_(request,pk):
 
     user = request.user
     img = request.FILES.get('img',None)
+    # if img != None:
+    #     print(111)
+    #     img = Image.open(img)
+    #     print(222)
+    #     img = crop_center(img, 2000, 2000)
+    #     print(333)
+        # img.save('main/img.jpg', quality=95)
     img = user.img if img == None else check_image(img)
 
     master = Master.objects.get(id=int(master))
