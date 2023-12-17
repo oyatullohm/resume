@@ -408,7 +408,7 @@
 <br  id="portfolio">
 
 <div class="container " style="margin-top: 70px;">
-  <div class="row">
+  <div class="row text-center">
 
     
     {% for p in user.projects.all %}
@@ -418,7 +418,7 @@
     <div style="margin-top: 70px!important;" class="">
       <!-- Card image -->
       <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-        <img class="  w-60" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ p.image}}" alt="Image placeholder">
+        <img class="  w-100" src="https://django-media.fra1.digitaloceanspaces.com/media/{{ p.image}}" alt="Image placeholder">
        </div>
       <div class="card-body">
        <h4 class="font-weight-normal mt-3">{{p.name}}</h4>
