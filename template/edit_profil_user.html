@@ -104,7 +104,11 @@
                                   <option value="/static/assets/img/service_icon/icons8-bank-64.png" selected> Bank Service </option>
                                   <option value="/static/assets/img/service_icon/icons8-credit-card-transfer-64.png" selected>Money transfer  </option>
                                   <option value="/static/assets/img/service_icon/icons8-card-exchange-64.png" selected> Another </option>
-                                  <!-- <img src="/static/assets/img/service_icon/icons8-bank-64.png" alt=""> -->
+                                  <option value="/static/assets/img/service_icon/icons8-operator-64.png" selected> Operator </option>
+                                  <option value="/static/assets/img/service_icon/icons8-bitcoin-64.png" selected>  Crypto money  </option>
+                                  <option value="/static/assets/img/service_icon/icons8-trading-64.png" selected>  Trading  </option>
+
+                                  <!-- <img src="/static/assets/img/service_icon/icons8-trading-64.png" alt=""> -->
                                 </select>
                               </div>
                             </div>
@@ -393,7 +397,7 @@
                   <div class="col-md-6  mt-4">
                     <label class="form-label"> {% trans 'Master' %} </label>
                     <div class="input-group input-group-static mb-4">
-                      <select class="form-control" id="exampleFormControlSelect1" name="master">
+                      <select class="form-control" placeholder  id="exampleFormControlSelect1" name="master">
                         <option value="{{user.master.id}}" selected>  {{user.master}} </option>
                         {% for m in master %}
 
@@ -406,7 +410,7 @@
                   <div class="col-md-6 mt-4">
                     <label class="form-label"> {% trans 'Level' %} </label>
                     <div class="input-group input-group-static mb-4">
-                      <select class="form-control" id="exampleFormControlSelect1" name="masterlevel">
+                      <select class="form-control" id="exampleFormControlSelect1" placeholder name="masterlevel">
                         <option   class=" bg-dark"  value="{{user.masterlevel.id}}"> {{user.masterlevel.level }} </option>
                         {% for m in masterlevel %}
                         <option  class=" bg-dark"  value="{{ m.id }}"> {{ m.level }} </option>
